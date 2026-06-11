@@ -1,0 +1,13 @@
+#lh_agree_to_terms-accept{
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    vertical-align: middle;
+}
+
+div#login_error {
+    width: 320px !important;
+}
+#login p.message{
+    width: 320px !important;
+}

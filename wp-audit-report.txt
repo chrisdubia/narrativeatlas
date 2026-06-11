@@ -1,0 +1,266 @@
+WP audit report
+Generated: Fri Jan 30 15:33:11 UTC 2026
+
+Path: /home/u6-2h5h2wdcgp79/www/narrativeatlas.org/public_html
+
+WordPress core
+6.9
+Success: WordPress is at the latest version.
+
+PHP
+PHP 8.1.34 (cli) (built: Dec 18 2025 16:14:52) (ZTS)
+Copyright (c) The PHP Group
+
+Plugins (active first)
+name	status	update	version	update_version	auto_update
+bb-group-topic-creation-restriction	active	none	1.0.0		off
+bb-new-default-group-tab-options	active	none	1.0.0		off
+bulk-group-member-creator	active	none	1.0.0		off
+bp-messaging-control	active	none	1.8.0		off
+mec-buddyboss	active	none	2.6.0		off
+buddyboss-platform	active	none	2.18.0		off
+buddyboss-platform-pro	active	none	2.12.0		on
+buddypress-docs	active	none	2.2.6		off
+buddypress-dynamic-group-tab-content	active	none	1.0.2		off
+buddypress-group-email-subscription	active	none	4.2.4		off
+bp-group-export-cli	active	none	1.0		off
+buddypress-group-tabs-creator-pro	active	none	1.0.3		off
+miniorange-otp-verification(2)	active	none	62.8.26		off
+modern-events-calendar	active	none	7.29.0		off
+narrativeatlas-aws-transcoder	active	none	1.0.0		off
+google-captcha	active	none	1.85		off
+rename-wp-login	active	none	2.6.0		off
+say-what-pro	active	none	5.7.4		off
+user-insights-forum-participation	active	none	1.0.0		off
+users-insights	active	none	4.7.0		off
+wp-all-import-pro	active	none	5.0.3		off
+wp-crontrol	active	none	1.21.0		off
+wp-file-manager	active	none	8.0.2		off
+wp-mail-smtp-pro	active	none	4.7.1		off
+amazon-s3-and-cloudfront-pro	active	none	3.2.12		off
+
+name	status	update	version	update_version	auto_update
+bnfw	inactive	none	1.9.9.1		off
+bp-notify-user-on-admin-create	inactive	none	1.0.0		off
+check-email	inactive	none	2.0.11		off
+cm-maps-routes-custom-fields-addon	inactive	none	1.2.4		off
+cm-maps-routes-buddypress-addon	inactive	none	1.1.1		off
+cm-maps-routes-manager-pro	inactive	none	5.1.2		off
+download-plugins-dashboard	inactive	none	1.9.9		off
+gamipress	inactive	none	7.6.4		off
+import-users-from-csv	inactive	none	1.3.1		on
+invite-anyone	inactive	none	1.4.10		off
+wp-mail-catcher	inactive	none	2.1.11		off
+narrativeatlas-helper	inactive	none	1.0.0		off
+wpai-user-add-on	inactive	none	1.1.8		off
+wp-mail-smtp	inactive	none	4.7.1		off
+
+Themes
+name	status	update	version	update_version	auto_update
+buddyboss-theme	parent	none	2.18.0		off
+narrativeatlas	active	none	1.0.0		off
+twentytwentyfive	inactive	available	1.3	1.4	off
+
+Cron
+hook	next_run	recurrence
+action_scheduler_run_queue	2026-01-30 10:33:12	1 minute
+bb_activity_publish	2026-01-30 10:33:45	1 minute
+bp_zoom_meeting_alerts_hook	2026-01-30 10:35:21	5 minutes
+recovery_mode_clean_expired_keys	2026-01-30 10:37:15	1 day
+bp_zoom_webinar_alerts_hook	2026-01-30 10:37:58	5 minutes
+mm_cron_hourly	2026-01-30 10:38:06	1 hour
+mec_scheduler	2026-01-30 10:39:03	1 hour
+bb_bg_log_clear_hourly	2026-01-30 10:56:53	1 hour
+check_email_trigger_notify_email_when_log_threshold_met	2026-01-30 11:11:36	1 hour
+wp_privacy_delete_old_export_files	2026-01-30 11:22:32	1 hour
+mec_syncScheduler	2026-01-30 11:39:03	1 day
+hourlySync	2026-01-30 13:12:23	1 day
+simple_history/maybe_purge_db	2026-01-30 13:30:59	1 day
+wp_update_user_counts	2026-01-30 13:36:55	12 hours
+wp_scheduled_auto_draft_delete	2026-01-30 14:43:26	1 day
+wpmudev_scheduled_jobs	2026-01-30 15:28:40	12 hours
+wp_version_check	2026-01-30 16:37:26	12 hours
+wp_update_plugins	2026-01-30 16:37:26	12 hours
+wp_update_themes	2026-01-30 16:37:26	12 hours
+wp_scheduled_delete	2026-01-30 16:38:06	1 day
+delete_expired_transients	2026-01-30 16:38:06	1 day
+mm_cron_daily	2026-01-30 16:38:06	1 day
+mm_cron_twicedaily	2026-01-30 16:38:06	12 hours
+deliciousbrains_wp_offload_ses_log_cleanup	2026-01-30 17:25:07	1 day
+bb_activity_post_feature_image_delete_orphaned_attachments_hook	2026-01-30 19:00:00	1 day
+puc_cron_check_updates-mec-buddyboss	2026-01-30 19:29:10	12 hours
+buddyboss-theme_check_license_status_event	2026-01-30 21:46:00	12 hours
+bb-platform_check_license_status_event	2026-01-30 22:11:01	12 hours
+bb-web_check_license_status_event	2026-01-30 22:11:11	12 hours
+bb_daily_draft_cleanup_event	2026-01-30 22:30:00	1 day
+bb_bg_log_clear	2026-01-30 23:59:59	1 day
+ass_digest_event	2026-01-31 00:00:00	1 day
+puc_cron_check_updates-mec	2026-01-31 00:57:53	1 day
+bp_video_delete_orphaned_attachments_hook	2026-01-31 07:29:32	1 day
+bp_media_delete_orphaned_attachments_hook	2026-01-31 08:47:50	1 day
+bp_document_delete_orphaned_attachments_hook	2026-01-31 08:48:06	1 day
+buddyboss_updater_schedule_daily	2026-01-31 09:05:39	1 day
+buddyboss-theme_ipn_clean	2026-01-31 09:46:05	1 day
+buddyboss-theme_ipn_remote_fetch	2026-01-31 09:46:05	1 day
+
+Database size (top tables)
+TABLE_NAME	size_mb
+wp_check_email_log	243.52
+wp_bb_background_process_logs	23.80
+wp_bp_notifications	23.68
+wp_postmeta	19.66
+wp_posts	16.30
+wp_usermeta	15.71
+wp_bp_notifications_meta	9.70
+wp_gamipress_logs_meta	7.55
+wp_as3cf_items	5.55
+wp_wpmailsmtp_debug_events	5.52
+wp_say_what_available_strings	4.03
+wp_options	3.56
+wp_gamipress_logs	3.06
+wp_bp_messages_meta	3.04
+wp_bp_activity	2.61
+wp_bp_media	1.91
+wp_pmxi_imports	1.52
+wp_elfsight_youtube_gallery_widgets	1.52
+wp_bp_activity_meta	1.36
+wp_bp_messages_messages	1.13
+wp_signups	1.10
+wp_bb_reactions_data	0.81
+wp_buddyboss_media	0.70
+wp_bp_messages_recipients	0.66
+wp_bp_suspend	0.58
+
+
+Table prefix: wp_
+
+Autoloaded options size (big cause of slow admin)
+autoload_mb
+0.37
+
+
+Top autoloaded options (largest 30)
+option_name	kb
+bp_media_import_media_ids	58.2
+bp_media_import_reply_media_ids	33.5
+duplicator_pro_package_active	24.6
+fs_accounts	22.4
+bp_document_extensions_support	17.2
+mec_options	14.8
+wp_user_roles	13.9
+cmmrm_option_labels	12.2
+old_buddyboss_theme_options_1_8_7	12.0
+buddyboss_theme_options	12.0
+bb-zoom	9.5
+boss_options	8.5
+dev4press_gd-bbpress-toolbox_tools	6.7
+bb_plugin_version_history	5.2
+dev4press_gd-bbpress-toolbox_bbpress	5.1
+yotuwp_presets	5.1
+buddyboss_theme_options-transients	4.7
+bboss_updater_saved_licenses	4.7
+bb_theme_version_history	4.4
+cmmrm_custom_css	3.8
+bb_pro_plugin_version_history	3.6
+wpforms_notifications	3.0
+bp_media_import_topic_media_ids	3.0
+siteground_optimizer_assets_data	2.5
+sgpb-all-notifications-data	2.3
+bb_enabled_notification	2.1
+bb-onesignal	2.0
+updraft_last_backup	2.0
+bp_video_extensions_support	1.9
+bp-better-chat-settings	1.8
+
+
+Post revisions count
+revisions
+7
+
+
+Trash posts count
+trash_posts
+2
+
+
+Spam and trash comments
+spam_comments	trash_comments
+0	0
+
+
+Expired transients count
+expired_transients
+2
+
+
+Orphaned postmeta (safe indicator of bloat)
+orphaned_postmeta
+633
+
+
+BuddyPress or BuddyBoss notifications and messages table sizes (if present)
+Tables_in_hostacau_db (wp_bp_%)
+wp_bp_activity
+wp_bp_activity_meta
+wp_bp_document
+wp_bp_document_folder
+wp_bp_document_folder_meta
+wp_bp_document_meta
+wp_bp_follow
+wp_bp_friends
+wp_bp_groups
+wp_bp_groups_groupmeta
+wp_bp_groups_membermeta
+wp_bp_groups_members
+wp_bp_invitations
+wp_bp_invitations_invitemeta
+wp_bp_media
+wp_bp_media_albums
+wp_bp_messages_messages
+wp_bp_messages_meta
+wp_bp_messages_notices
+wp_bp_messages_recipients
+wp_bp_moderation
+wp_bp_moderation_meta
+wp_bp_notifications
+wp_bp_notifications_meta
+wp_bp_suspend
+wp_bp_suspend_details
+wp_bp_suspend_meta
+wp_bp_user_blogs
+wp_bp_user_blogs_blogmeta
+wp_bp_xprofile_data
+wp_bp_xprofile_fields
+wp_bp_xprofile_groups
+wp_bp_xprofile_meta
+wp_bp_zoom_meeting_meta
+wp_bp_zoom_meetings
+wp_bp_zoom_recordings
+wp_bp_zoom_webinar_meta
+wp_bp_zoom_webinar_recordings
+wp_bp_zoom_webinars
+wp_bpges_queued_items
+wp_bpges_subscriptions
+
+
+TABLE_NAME	size_mb
+wp_bp_notifications	23.68
+wp_bp_messages_meta	3.04
+wp_bp_messages_messages	1.13
+wp_bp_messages_recipients	0.66
+
+
+BuddyPress notifications count (if table exists)
+bp_notifications_rows
+47
+
+
+BuddyPress messages counts (if tables exist)
+messages_rows
+7443
+
+recipients_rows
+6108
+
+
+Done.

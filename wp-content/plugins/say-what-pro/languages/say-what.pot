@@ -1,0 +1,417 @@
+# Copyright (C) 2017 Ademti Software Ltd.
+msgid ""
+msgstr ""
+"Project-Id-Version: Say What? Pro 5.7.4\n"
+"Report-Msgid-Bugs-To: https://plugins.leewillis.co.uk/support\n"
+"POT-Creation-Date: 2023-03-31 08:58:46+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \"Ademti Software Support\" "
+"<support@ademti-software.co.uk>\n"
+"Language-Team: \"Ademti Software Support\" <support@ademti-software.co.uk>\n"
+"Poedit: \n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: src/SayWhatPro.php:106
+msgid ""
+"%1$sSay What? Pro%2$s replaces the free version, so we have deactivated the "
+"free version. You can remove the free plugin when convenient."
+msgstr ""
+
+#: src/SayWhatPro.php:110
+msgid "Say What? Pro replaces the free version plugin."
+msgstr ""
+
+#: src/SayWhatPro.php:112
+msgid "Please deactivate Say What?"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:105
+msgid "Settings"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:152
+msgid "Error, you do not have permissions to import replacements."
+msgstr ""
+
+#: src/SayWhatProAdmin.php:165
+#. Translators: %s is the MIME type of the provided file.
+msgid "Incorrect file type (%s), import request ignored."
+msgstr ""
+
+#: src/SayWhatProAdmin.php:192 src/SayWhatProAdmin.php:193
+#: templates/admin-header.php:3
+msgid "Text changes"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:363
+msgid "Search replacements"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:376
+msgid "Enable"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:379
+msgid "Disable"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:408 src/SayWhatProAdmin.php:415
+#: src/SayWhatProAdmin.php:434 src/SayWhatProAdmin.php:441
+#: src/SayWhatProAdmin.php:462 src/SayWhatProAdmin.php:478
+#: src/SayWhatProAdmin.php:712 src/SayWhatProAdmin.php:748
+msgid "Did you really mean to do that? Please go back and try again."
+msgstr ""
+
+#: src/SayWhatProAdmin.php:557 src/SayWhatProAdmin.php:682
+msgid "Add"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:559 src/SayWhatProAdmin.php:680
+msgid "Update"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:591
+msgid "English (United States)"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:595
+msgid "------------"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:604 src/SayWhatProListTable.php:303
+#: src/SayWhatProWildcardsListTable.php:149
+msgid "Any"
+msgstr ""
+
+#: src/SayWhatProAdmin.php:828
+msgid ""
+"String discovery suggestions have been cleared out as part of the most "
+"recent upgrade. Enable String Discovery to capture suggested strings again."
+msgstr ""
+
+#: src/SayWhatProAdmin.php:830
+msgid "Your existing string replacements are unaffected."
+msgstr ""
+
+#: src/SayWhatProAutocompleteMatcher.php:37
+#. Translators: %s is the translated version of the string.
+msgid "In your language:%1$s&quot;%2$s&quot;%3$s"
+msgstr ""
+
+#: src/SayWhatProAutocompleteMatcher.php:66
+msgid "No matches found"
+msgstr ""
+
+#: src/SayWhatProAutocompleteMatcher.php:73
+msgid "No suggestions available. Try String discovery"
+msgstr ""
+
+#: src/SayWhatProImporter.php:56
+#. Translators: %1$d is number of inserted records, %2$d is the number of
+#. updated records.
+msgid "new records: %1$d, updates: %2$d"
+msgstr ""
+
+#: src/SayWhatProImporter.php:63
+#. Translators: %1$d is number of inserted records, %2$d is the number of
+#. updated records.
+msgid "Number of items imported: %1$d (%2$s)."
+msgstr ""
+
+#: src/SayWhatProImporter.php:126
+#. Translators: %s is the ID provided in the import file.
+msgid "Invalid ID received (\"%s\"), processing stopped."
+msgstr ""
+
+#: src/SayWhatProImporter.php:175
+#. Translators: %s is the name of the missing header(s).
+msgid "File missing required headers: %s."
+msgstr ""
+
+#: src/SayWhatProListTable.php:42
+msgid "Export replacements"
+msgstr ""
+
+#: src/SayWhatProListTable.php:52
+#. Translators: %s is the search term.
+msgid "No string replacements matching &quot;%s&quot;."
+msgstr ""
+
+#: src/SayWhatProListTable.php:58
+msgid "No string replacements configured yet."
+msgstr ""
+
+#: src/SayWhatProListTable.php:70 templates/admin-add-edit.php:9
+#: templates/admin-import.php:4
+msgid "Original string"
+msgstr ""
+
+#: src/SayWhatProListTable.php:71 templates/admin-add-edit.php:17
+#: templates/admin-import.php:5
+msgid "Text domain"
+msgstr ""
+
+#: src/SayWhatProListTable.php:72 templates/admin-add-edit.php:29
+#: templates/admin-import.php:6
+msgid "Text context"
+msgstr ""
+
+#: src/SayWhatProListTable.php:73 templates/admin-add-edit.php:42
+#: templates/admin-import.php:7
+msgid "Replacement string"
+msgstr ""
+
+#: src/SayWhatProListTable.php:76 src/SayWhatProWildcardsListTable.php:64
+#: templates/admin-add-edit-multilingual-section.php:2
+#: templates/admin-add-edit-wildcard-multilingual-section.php:2
+msgid "Affected language"
+msgstr ""
+
+#: src/SayWhatProListTable.php:156
+msgid "Disable replacements"
+msgstr ""
+
+#: src/SayWhatProListTable.php:157
+msgid "Enable replacements"
+msgstr ""
+
+#: src/SayWhatProListTable.php:158 src/SayWhatProListTable.php:391
+#: src/SayWhatProWildcardsListTable.php:123
+#: src/SayWhatProWildcardsListTable.php:218
+msgid "Delete"
+msgstr ""
+
+#: src/SayWhatProListTable.php:287 templates/admin-add-edit.php:60
+#: templates/admin-delete-wildcard.php:9 templates/admin-delete.php:9
+msgid "No"
+msgstr ""
+
+#: src/SayWhatProListTable.php:288 templates/admin-add-edit.php:59
+#: templates/admin-delete-wildcard.php:6 templates/admin-delete.php:6
+msgid "Yes"
+msgstr ""
+
+#: src/SayWhatProListTable.php:353
+msgid "(disabled)"
+msgstr ""
+
+#: src/SayWhatProListTable.php:384 src/SayWhatProWildcardsListTable.php:211
+msgid "Edit"
+msgstr ""
+
+#: src/SayWhatProWildcardsListTable.php:42
+msgid "Export wildcard swaps"
+msgstr ""
+
+#: src/SayWhatProWildcardsListTable.php:49
+msgid "No wildcard swaps configured yet."
+msgstr ""
+
+#: src/SayWhatProWildcardsListTable.php:60
+#: templates/admin-add-edit-wildcard.php:6
+msgid "Look for"
+msgstr ""
+
+#: src/SayWhatProWildcardsListTable.php:61
+msgid "Swap with"
+msgstr ""
+
+#: templates/admin-add-edit-wildcard.php:8
+msgid "Note: This is case-sensitive"
+msgstr ""
+
+#: templates/admin-add-edit-wildcard.php:11
+msgid "Replace with"
+msgstr ""
+
+#: templates/admin-add-edit.php:2
+msgid ""
+"Fill in the details of the original translatable string, the string's text "
+"domain, and the string you would like to use instead. For more information "
+"check out the %1$sgetting started guide%2$s."
+msgstr ""
+
+#: templates/admin-add-edit.php:11
+msgid "Enter part of the string you're trying to replace to see suggestions"
+msgstr ""
+
+#: templates/admin-add-edit.php:23
+msgid ""
+"Enter the plugin / theme text domain. If you selected a suggestion above "
+"this will have been filled in if required."
+msgstr ""
+
+#: templates/admin-add-edit.php:35
+msgid ""
+"Enter the string context. If you selected a suggestion above this will have "
+"been filled in if required."
+msgstr ""
+
+#: templates/admin-add-edit.php:45
+msgid "Enter your replacement string."
+msgstr ""
+
+#: templates/admin-add-edit.php:53
+msgid "Active"
+msgstr ""
+
+#: templates/admin-add-edit.php:56
+msgid "Whether this replacement is active or not."
+msgstr ""
+
+#: templates/admin-delete-wildcard.php:2
+msgid ""
+"Are you sure you want to delete the wildcard swap for "
+"&quot;{original}&quot;?"
+msgstr ""
+
+#: templates/admin-delete.php:2
+msgid ""
+"Are you sure you want to delete the replacement string for "
+"&quot;{orig_string}&quot;?"
+msgstr ""
+
+#: templates/admin-discovery.php:2
+msgid ""
+"If you are struggling to locate the string replacement you need, you can "
+"use this tool to capture strings\n"
+"        available on your site. To activate it, just click on the button "
+"below. This will set a cookie in your browser\n"
+"        session asking the plugin to make a note of every string available "
+"for replacement. To use this function follow\n"
+"        the instructions below."
+msgstr ""
+
+#: templates/admin-discovery.php:7
+msgid "Click on the button below."
+msgstr ""
+
+#: templates/admin-discovery.php:8
+msgid "Visit the page containing the string you want to override."
+msgstr ""
+
+#: templates/admin-discovery.php:9
+msgid "Come back to this page, to disable the feature."
+msgstr ""
+
+#: templates/admin-discovery.php:10
+msgid "Add a new string."
+msgstr ""
+
+#: templates/admin-discovery.php:10
+msgid ""
+"The entry boxes\n"
+"            will offer autocomplete suggestions based on the strings it has "
+"captured."
+msgstr ""
+
+#: templates/admin-header.php:5
+msgid "Add Replacement"
+msgstr ""
+
+#: templates/admin-header.php:11
+msgid "String replacements"
+msgstr ""
+
+#: templates/admin-header.php:14
+msgid "String discovery"
+msgstr ""
+
+#: templates/admin-header.php:17
+msgid "Import replacements"
+msgstr ""
+
+#: templates/admin-header.php:20
+msgid "Wildcard swaps"
+msgstr ""
+
+#: templates/admin-import-multilingual-column.php:1
+msgid "Language code"
+msgstr ""
+
+#: templates/admin-import.php:2
+msgid ""
+"Use this form to import replacements from a CSV file. The file should have "
+"a header row, and the following columns:"
+msgstr ""
+
+#: templates/admin-import.php:8
+msgid "Active? (optional)"
+msgstr ""
+
+#: templates/admin-import.php:11
+msgid ""
+"You can generate a suitable file by exporting your current replacements on "
+"the &quot;Manage replacements&quot; tab."
+msgstr ""
+
+#: templates/admin-import.php:15
+msgid "Choose a file from your computer:"
+msgstr ""
+
+#: templates/admin-wildcard-intro.php:2
+msgid ""
+"Wildcard swaps allow you to specify parts of strings, rather than the exact "
+"full string. The wildcard will be replaced in all strings where it occurs, "
+"unless that string has a specific replacement set up."
+msgstr ""
+
+#: templates/admin-wildcard-intro.php:5
+msgid ""
+"Caution: Wildcard swaps are inefficient, and can slow down your site. Using "
+"proper replacements is always preferred. "
+msgstr ""
+
+#: templates/admin-wildcard-intro.php:5
+msgid ""
+"Swaps may also produce undesireable results since they apply to all "
+"translatable strings, e.g. swapping %1$smanage%2$s with %1$scontrol%2$s "
+"would change %1$smanagement%2$s to %1$scontrolment%2$s"
+msgstr ""
+
+#: templates/admin-wildcard-intro.php:8
+msgid "Add Wildcard Swap"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Say What? Pro"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://plugins.leewillis.co.uk/downloads/say-what-pro"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"An easy-to-use plugin that allows you to alter strings on your site without "
+"editing WordPress core, or plugin code."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Ademti Software Ltd."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.ademti-software.co.uk/"
+msgstr ""
+
+#: src/SayWhatProListTable.php:68
+msgctxt "Unique ID of the string replacement"
+msgid "ID"
+msgstr ""
+
+#: src/SayWhatProListTable.php:69
+msgctxt "Heading for column in admin table indicating if replacement is active"
+msgid "Active?"
+msgstr ""
+
+#: src/SayWhatProWildcardsListTable.php:59
+msgctxt "Unique ID of the wildcard swap"
+msgid "ID"
+msgstr ""

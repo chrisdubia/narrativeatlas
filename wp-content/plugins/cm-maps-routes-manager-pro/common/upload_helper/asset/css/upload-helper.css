@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+.cm-upload-helper-attachments {margin-top: 1em;}
+.cm-upload-helper-attachments-list, .cm-upload-helper-attachments-list li {margin: 0 !important; padding: 0 !important; list-style: none;}
+.cm-upload-helper-attachments-list li {display: inline-block; position: relative; margin-right: 1em !important;}
+.cm-upload-helper-attachments-list img {max-width: 80px;}
+.cm-upload-helper-attachment-delete {position: absolute; top: 0; right: 0; cursor: pointer; background: white; color: black; display: block; width: 1em; text-align: center; line-height: 1em;}

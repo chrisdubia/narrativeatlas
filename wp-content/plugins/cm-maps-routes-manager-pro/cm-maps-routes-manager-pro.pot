@@ -1,0 +1,684 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CM Maps Routes Manager Pro\n"
+"Report-Msgid-Bugs-To: https://www.cminds.com\n"
+"Last-Translator: CreativeMinds <support@cminds.com>\n"
+"Language-Team: CreativeMinds <support@cminds.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-07-09 14:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: cm-maps-routes-manager-pro\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
+
+#. images
+msgid "Images & Videos"
+msgstr ""
+
+#. missing_google_maps_app_key
+msgid "Administrator must enter the Google Maps App Key in the plugin settings."
+msgstr ""
+
+#. length_km
+msgid "km"
+msgstr ""
+
+#. length_miles
+msgid "miles"
+msgstr ""
+
+#. change_map_style
+msgid "Tiles"
+msgstr ""
+
+#. close
+msgid "Close"
+msgstr ""
+
+#. coordinates
+msgid "Coordinates"
+msgstr ""
+
+#. page_not_found
+msgid "Page not found."
+msgstr ""
+
+#. show_all_locations
+msgid "Reset map and show all locations"
+msgstr ""
+
+#. map_reset_btn
+msgid "Reset"
+msgstr ""
+
+#. menu_all_routes
+msgid "All routes"
+msgstr ""
+
+#. menu_my_routes
+msgid "My routes"
+msgstr ""
+
+#. menu_add_route
+msgid "Add route"
+msgstr ""
+
+#. menu_view_route
+msgid "View route"
+msgstr ""
+
+#. menu_edit_route
+msgid "Edit route"
+msgstr ""
+
+#. dashboard_add_route_btn
+msgid "Add route"
+msgstr ""
+
+#. show_terrain_btn
+msgid "Show terrain"
+msgstr ""
+
+#. travel_mode
+msgid "Travel mode"
+msgstr ""
+
+#. travel_mode_walking
+msgid "walking"
+msgstr ""
+
+#. travel_mode_bicycling
+msgid "bicycling"
+msgstr ""
+
+#. travel_mode_driving
+msgid "driving"
+msgstr ""
+
+#. travel_mode_direct
+msgid "straight-line"
+msgstr ""
+
+#. show_fullscreen_btn
+msgid "Fullscreen"
+msgstr ""
+
+#. show_fullscreen_title
+msgid "Fullscreen"
+msgstr ""
+
+#. route_backlink
+msgid "Back"
+msgstr ""
+
+#. search_form_submit_btn
+msgid ""
+msgstr ""
+
+#. routes_filter_header
+msgid "Find route"
+msgstr ""
+
+#. route_name
+msgid "Route name"
+msgstr ""
+
+#. route_description
+msgid "Description"
+msgstr ""
+
+#. route_author
+msgid "Author"
+msgstr ""
+
+#. route_status
+msgid "Status"
+msgstr ""
+
+#. route_status_draft
+msgid "Draft"
+msgstr ""
+
+#. route_status_publish
+msgid "Publish"
+msgstr ""
+
+#. route_images
+msgid "Images & Videos"
+msgstr ""
+
+#. route_osmtiles
+msgid "OSM Tiles"
+msgstr ""
+
+#. route_access_denied
+msgid "Access denied."
+msgstr ""
+
+#. route_index_title
+msgid "CM Maps Routes Manager"
+msgstr ""
+
+#. route_index_for_author_title
+msgid "Routes of author:"
+msgstr ""
+
+#. single_route_title_part
+msgid "CM Maps Routes Manager"
+msgstr ""
+
+#. route_index_access_denied
+msgid "Access denied."
+msgstr ""
+
+#. route_not_found
+msgid "Route not found."
+msgstr ""
+
+#. route_distance
+msgid "Distance"
+msgstr ""
+
+#. route_duration
+msgid "Time"
+msgstr ""
+
+#. route_avg_speed
+msgid "Speed"
+msgstr ""
+
+#. route_max_elevation
+msgid "Peak"
+msgstr ""
+
+#. route_min_elevation
+msgid "Min altitude"
+msgstr ""
+
+#. route_elevation_gain
+msgid "Climb"
+msgstr ""
+
+#. route_elevation_descent
+msgid "Descent"
+msgstr ""
+
+#. routes_index_summary
+msgid "Displaying %d of %d routes."
+msgstr ""
+
+#. route_created
+msgid "Created"
+msgstr ""
+
+#. route_updated
+msgid "Updated"
+msgstr ""
+
+#. route_save_success
+msgid "Route has been saved."
+msgstr ""
+
+#. index_no_routes
+msgid "No routes to display."
+msgstr ""
+
+#. elevation_graph_alt_tooltip
+msgid "Alt: %s"
+msgstr ""
+
+#. elevation_graph_dist_from_start_tooltip
+msgid "Dist from start: %s"
+msgstr ""
+
+#. locations
+msgid "Locations"
+msgstr ""
+
+#. location_name
+msgid "Location name"
+msgstr ""
+
+#. location_latitude
+msgid "Latitude"
+msgstr ""
+
+#. location_longitude
+msgid "Longitude"
+msgstr ""
+
+#. location_linktext
+msgid "Link Text"
+msgstr ""
+
+#. location_linkurl
+msgid "Link URL"
+msgstr ""
+
+#. location_distance
+msgid "Distance (from start)"
+msgstr ""
+
+#. location_altitude
+msgid "Altitude"
+msgstr ""
+
+#. location_description
+msgid "Description"
+msgstr ""
+
+#. location_address
+msgid "Address"
+msgstr ""
+
+#. locations_markers
+msgid "Location markers"
+msgstr ""
+
+#. dashboard_edit_route_title
+msgid "Edit route"
+msgstr ""
+
+#. dashboard_my_routes_title
+msgid "My routes"
+msgstr ""
+
+#. dashboard_add_route_title
+msgid "Add route"
+msgstr ""
+
+#. dashboard_access_denied_msg
+msgid "Access denied."
+msgstr ""
+
+#. dashboard_unknown_action_msg
+msgid "Unknown action."
+msgstr ""
+
+#. dashboard_location_remove_btn
+msgid "Remove Location"
+msgstr ""
+
+#. dashboard_location_convert_btn
+msgid "Convert to waypoint"
+msgstr ""
+
+#. dashboard_save_btn
+msgid "Save"
+msgstr ""
+
+#. dashboard_save_draft_btn
+msgid "Save Draft"
+msgstr ""
+
+#. dashboard_remove_btn
+msgid "Remove Route"
+msgstr ""
+
+#. dashboard_routes_actions
+msgid "Actions"
+msgstr ""
+
+#. dashboard_view
+msgid "View"
+msgstr ""
+
+#. dashboard_edit
+msgid "Edit"
+msgstr ""
+
+#. dashboard_delete
+msgid "Delete"
+msgstr ""
+
+#. confirm_delete_msg
+msgid "Do you really want to delete?"
+msgstr ""
+
+#. dashboard_no_routes
+msgid "No routes."
+msgstr ""
+
+#. dashboard_new_location
+msgid "Location #%d"
+msgstr ""
+
+#. dashboard_use_minor_length_units
+msgid "Use only meters/feet instead of kilometers/miles"
+msgstr ""
+
+#. dashboard_path_color
+msgid "Path color"
+msgstr ""
+
+#. dashboard_map_search
+msgid "Find location..."
+msgstr ""
+
+#. dashboard_image_open
+msgid "Open image"
+msgstr ""
+
+#. dashboard_images_description
+msgid "Drag images/videos to change the order."
+msgstr ""
+
+#. dashboard_image_remove
+msgid "Remove image"
+msgstr ""
+
+#. dashboard_upload_image
+msgid "Upload images & videos:"
+msgstr ""
+
+#. dashboard_video_add_btn
+msgid "Add video"
+msgstr ""
+
+#. instructions_btn
+msgid "Instructions"
+msgstr ""
+
+#. route_terms
+msgid "I accept the Terms & Conditions"
+msgstr ""
+
+#. editor_add_locations_mode_btn_text
+msgid "Add markers"
+msgstr ""
+
+#. editor_add_locations_mode_btn_desc
+msgid "Add markers for the points of interests"
+msgstr ""
+
+#. editor_draw_path_mode_btn_text
+msgid "Draw the route"
+msgstr ""
+
+#. editor_draw_path_mode_btn_desc
+msgid "Draw the route's polyline path"
+msgstr ""
+
+#. recalculate_route_params
+msgid "Recalculate route parameters"
+msgstr ""
+
+#. recalculate_custom_params
+msgid "Recalculate custom parameters"
+msgstr ""
+
+#. widget_title_related_routes
+msgid "Related routes"
+msgstr ""
+
+#. widget_edit_text
+msgid "Edit"
+msgstr ""
+
+#. search_placeholder
+msgid "Search text..."
+msgstr ""
+
+#. search_btn
+msgid "Search"
+msgstr ""
+
+#. menu_import_route
+msgid "Import route"
+msgstr ""
+
+#. route_category
+msgid "Route Category"
+msgstr ""
+
+#. route_categories
+msgid "Route Categories"
+msgstr ""
+
+#. categories
+msgid "Categories"
+msgstr ""
+
+#. tags
+msgid "Tags"
+msgstr ""
+
+#. filter_all_categories_opt
+msgid "-- all categories --"
+msgstr ""
+
+#. filter_option_show_all_custom_taxonomy_terms
+msgid "-- all %s --"
+msgstr ""
+
+#. filter_option_show_all_rates
+msgid "All rates"
+msgstr ""
+
+#. filter_option_rating
+msgid "Rating: %d"
+msgstr ""
+
+#. filter_zip_code
+msgid "ZIP code:"
+msgstr ""
+
+#. filter_zip_radius
+msgid "Radius:"
+msgstr ""
+
+#. proximity_order_reload
+msgid "We can sort the routes by the proximity of your location. Do you want to reload this page?"
+msgstr ""
+
+#. route_category
+msgid "Category"
+msgstr ""
+
+#. route_category_create
+msgid "Add New Category"
+msgstr ""
+
+#. route_tags
+msgid "Tags"
+msgstr ""
+
+#. route_export_kml
+msgid "Export to KML file"
+msgstr ""
+
+#. route_export_gpx
+msgid "Export to GPX file"
+msgstr ""
+
+#. rate_btn_title
+msgid "Rate: %d"
+msgstr ""
+
+#. route_embed_btn
+msgid "Embed"
+msgstr ""
+
+#. route_embed_iframe
+msgid "Embed route on your website."
+msgstr ""
+
+#. route_embed_copy_html
+msgid "Copy the following HTML iframe code to your website:"
+msgstr ""
+
+#. route_embed_copy_to_clipboard
+msgid "Copy to clipboard"
+msgstr ""
+
+#. route_login_for_download
+msgid "Login for Download GPX/KML"
+msgstr ""
+
+#. route_status_pending
+msgid "Pending review"
+msgstr ""
+
+#. route_save_success_pending
+msgid "It's pending for the moderator review."
+msgstr ""
+
+#. moderation_user_email_action_accept
+msgid "accepted"
+msgstr ""
+
+#. moderation_user_email_action_trash
+msgid "trashed"
+msgstr ""
+
+#. moderation_msg_published
+msgid "Route has been published."
+msgstr ""
+
+#. moderation_msg_trashed
+msgid "Route has been trashed."
+msgstr ""
+
+#. moderation_msg_return_to_website
+msgid "Return to website"
+msgstr ""
+
+#. check_weather
+msgid "Check the weather"
+msgstr ""
+
+#. dashboard_import_route_title
+msgid "Import KML/GPX"
+msgstr ""
+
+#. dashboard_import_form_desc
+msgid "Select KML, KMZ or GPX file to import:"
+msgstr ""
+
+#. dashboard_import_loader_text
+msgid "Please wait, this may take a while..."
+msgstr ""
+
+#. dashboard_import_form_submit_btn
+msgid "Import"
+msgstr ""
+
+#. dashboard_import_max_waypoints
+msgid "Waypoints density (high waypoints number may cause some performance issues):"
+msgstr ""
+
+#. dashboard_show_weather_per_location
+msgid "Show weather per each location (disabled to show it once per trail)"
+msgstr ""
+
+#. dashboard_show_directional_arrows
+msgid "Show directional arrows for the trail path"
+msgstr ""
+
+#. dashboard_show_locations_section
+msgid "Show locations section under the map on the single route page"
+msgstr ""
+
+#. editor_import_kml_gpx
+msgid "Import KML, KMZ or GPX file"
+msgstr ""
+
+#. editor_import_kml_gpx_warning
+msgid "Warning: existing locations will be removed."
+msgstr ""
+
+#. dashboard_location_icon_choose_btn
+msgid "Set icon"
+msgstr ""
+
+#. dashboard_location_icon_remove_btn
+msgid "Remove icon"
+msgstr ""
+
+#. dashboard_location_icon_size
+msgid "Icon size:"
+msgstr ""
+
+#. location_icon_size_large
+msgid "large"
+msgstr ""
+
+#. location_icon_size_normal
+msgid "normal"
+msgstr ""
+
+#. location_icon_size_small
+msgid "small"
+msgstr ""
+
+#. location_open_info_window
+msgid "Open info window by default"
+msgstr ""
+
+#. location_generate_waze_button
+msgid "Generate waze button"
+msgstr ""
+
+#. dashboard_show_path_outline
+msgid "Show path outline"
+msgstr ""
+
+#. dashboard_hide_on_index
+msgid "Hide on index page"
+msgstr ""
+
+#. dashboard_route_settings
+msgid "Route settings"
+msgstr ""
+
+#. dashboard_elevation_graph_settings_header
+msgid "Elevation graph"
+msgstr ""
+
+#. dashboard_show_slopes
+msgid "Enable showing slopes"
+msgstr ""
+
+#. dashboard_show_slopes_label
+msgid "Enable showing label slopes"
+msgstr ""
+
+#. dashboard_slope_min_val
+msgid "Slope minimum value [%]:"
+msgstr ""
+
+#. dashboard_slope_min_width
+msgid "Slope minimum width [pixels]:"
+msgstr ""
+
+#. dashboard_slope_downward_color
+msgid "Slope Downward Color:"
+msgstr ""
+
+#. dashboard_slope_upward_color
+msgid "Slope Upward Color:"
+msgstr ""
+
+#. widget_title_tag_cloud
+msgid "Routes tag cloud"
+msgstr ""
+
+#. route_link_sharing
+msgid "Link Sharing"
+msgstr ""
+
+#. route_copy_route
+msgid "Share Route"
+msgstr ""
+
+#. route_copy_route_category
+msgid "Share Category"
+msgstr ""
+
+#. route_copied
+msgid "Copied!"
+msgstr ""

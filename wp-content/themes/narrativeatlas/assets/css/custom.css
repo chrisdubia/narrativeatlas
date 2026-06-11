@@ -1,0 +1,71 @@
+/*--------------------------------------------------------------
+This is your custom stylesheet.
+
+Add your own styles here to make theme updates easier.
+To override any styles from other stylesheets, simply copy them into here and edit away.
+
+Make sure to respect the media queries! Otherwise you may
+accidentally add desktop styles to the mobile layout.
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+--------------------------------------------------------------*/
+
+h3.activity-subscription-settings-title {
+    color: #122b46;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 15px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+div.ass-email-type label {
+    font-weight: 600;
+    display: block;
+    font-size: 15px;
+    color: #4d5c6d;
+    letter-spacing: -.27px;
+    line-height: 1.187;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+div.ass-email-type label:before {
+     content: '';
+     display: inline-block;
+     vertical-align: middle;
+     cursor: pointer;
+     position: relative;
+     overflow: hidden;
+     width: 22px;
+     height: 22px;
+     line-height: 1;
+     background-color: #fff;
+     border: 2px solid #d6dce6;
+     border-radius: 100%;
+     margin-right: 10px;
+}
+div.ass-email-type label:after {
+    content: '';
+    background-color: #007cff;
+    margin: auto;
+    width: 14px;
+    position: absolute;
+    height: 14px;
+    text-align: center;
+    left: 4px;
+    top: 4px;
+    border-radius: 100%;
+}
+
+.na-encoding-notice {
+    margin-top: 20px;
+    color: red;
+}
+
+.item-meta div[id^="ges-panel-"] {
+    display: none;
+}
+
+.item-meta .group-type,
+#item-header-content .bp-group-meta .group-type{
+    display:none;
+}

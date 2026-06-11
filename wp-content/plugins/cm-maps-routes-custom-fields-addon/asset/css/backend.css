@@ -1,0 +1,8 @@
+.cmmrmcf-loader {width: 43px; height: 11px; background: url(../img/ajax-loader-bar.gif);}
+
+.cmmrm-custom-fields-settings th {text-align: left !important;}
+.cmmrm-custom-fields-settings th, .cmmrm-custom-fields-settings td {padding: 5px 10px !important; width: auto !important;}
+.cmmrm-custom-fields-settings table {margin-bottom: 1em;}
+.cmmrm-custom-fields-settings input[type="text"] {margin: 0 !important; width: 99% !important;}
+.cmmrm-custom-fields-settings .cmmrmcf-delete {cursor: pointer;}
+.cmmrm-custom-fields-settings tbody tr:first-child {display: none;}

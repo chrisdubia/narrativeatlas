@@ -1,0 +1,9 @@
+.cmmrm-route-map-before .cmmrm-route-params {margin: 2em 0 !important;}
+.cmmrm-route-params {margin: 0 !important; color: white !important;}
+.cmmrm-route-params li {border-right-style: none; border-right-color: white;}
+*[data-fancy-border="1"] .cmmrm-route-params li {border-right-style: dashed;}
+.cmmrm-route-params li:first-child {border-left-style: none !important;}
+*[data-layout="tiles"] .cmmrm-author a {color: white; text-decoration: white;}
+.cmmrm-shortcode-route-snippet[data-layout="tiles"] .cmmrm-route-snippet h2,
+.cmmrm-shortcode-route-snippet[data-layout="tiles"] .cmmrm-route-snippet h2 a,
+.cmmrm-shortcode-route-snippet[data-layout="tiles"] .cmmrm-route-snippet .cmmrm-date {color: white;}

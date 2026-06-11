@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+.cmmrm-buddypress-routes-list .cmmrm-route-snippet { margin: 0; padding: 0.5em 0 !important; }
+.cmmrm-buddypress-routes-list .cmmrm-shortcode-route-snippet h2 { font-weight: bold; }
+.cmmrm-buddypress-routes-list .cmmrm-shortcode-route-snippet .cmmrm-author { display: none !important; }
+.cmmrm-buddypress-btn { background: #009944; color: white; padding: 0.5em 2em; display: inline-block; font-weight: bold; margin: 0 0 1em 0; cursor: pointer; }
+.cmmrm-buddypress-profile-user-maps .cmmrm-map-shortcode { display: none; }
+.cmmrm-buddypress-profile-user-maps .cmmrm-buddypress-manage-routes { margin-top: 1em; display: none; }

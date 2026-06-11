@@ -1,0 +1,120 @@
+images	Images & Videos	Images and videos gallery label.	General
+missing_google_maps_app_key	Administrator must enter the Google Maps App Key in the plugin settings.	Message when Google API key is missing.	General
+length_km	km	Kilometers length unit.	General
+length_miles	miles	Miles length unit.	General
+change_map_style	OSM Tile	OSM Tile label on the map.	General
+close	Close	Info window close link.	General
+coordinates	Coordinates	Info window coordinates shortcode heading text.	General
+start_waze_navigation	Click here to start Waze Navigation	Click here to start Waze Navigation button text.	General
+
+roadmap_name	Map	Roadmap button text, default "Map".	Map Types
+roadmap_alt	Show street map	Roadmap button alt text, default "Show street map".	Map Types
+satellite_name	Satellite	Satellite button text, default "Satellite".	Map Types
+satellite_alt	Show satellite imagery	Satellite button alt text, default "Show satellite imagery".	Map Types
+hybrid_name	Hybrid	Hybrid button text, default "Hybrid".	Map Types
+hybrid_alt	Show imagery with street names	Hybrid button alt text, default "Show imagery with street names".	Map Types
+terrain_name	Terrain	Terrain button text, default "Terrain".	Map Types
+terrain_alt	Show street map with terrain	Terrain button alt text, default "Show street map with terrain".	Map Types
+
+page_not_found	Page not found.	Message on 404 page.	Navigation
+show_all_locations	Reset map and show all locations	Label for show all locations button.	Navigation
+map_reset_btn	Reset	Label for map's reset button.	Navigation
+menu_all_routes	All routes	All routes menu item.	Navigation
+menu_my_routes	My routes	My routes menu item.	Navigation
+menu_add_route	Add route	Add route menu item.	Navigation
+menu_view_route	View route	View route menu item.	Navigation
+menu_edit_route	Edit route	Edit route menu item.	Navigation
+dashboard_add_route_btn	Add route	Add route button in dashboard.	Navigation
+show_terrain_btn	Show terrain	Show terrain button label.	Navigation
+travel_mode	Travel mode	Travel mode label.	Navigation
+travel_mode_walking	walking	Travel mode: walking.	Navigation
+travel_mode_bicycling	bicycling	Travel mode: bicycling.	Navigation
+travel_mode_driving	driving	Travel mode: driving.	Navigation
+travel_mode_direct	straight-line	Travel mode: straight-line (previously: direct).	Navigation
+show_fullscreen_btn	Fullscreen	Show fullscreen button.	Navigation
+show_fullscreen_title	Fullscreen	Show fullscreen button's title.	Navigation
+route_backlink	Back	Route backlink label.	Navigation
+search_form_submit_btn	<span class="dashicons dashicons-search"></span>	Search button label.	Navigation
+routes_filter_header	Find route	Filter's header	Navigation
+
+route_name	Route name	Field name for route name.	Route
+route_description	Description	Field name for route description.	Route
+route_author	Author	Route's author.	Route
+route_status	Status	Field name for route status.	Route
+route_status_draft	Draft	Route "draft" status.	Route
+route_status_publish	Publish	Route "publish" status.	Route
+route_images	Images & Videos	Route images and videos field.	Route
+route_osmtiles	OSM Tiles	OSM Tiles field.	Route
+route_access_denied	Access denied.	Access denied message for route page.	Route
+route_index_title	CM Maps Routes Manager	Routes index page title.	Route
+route_index_for_author_title	Routes of author:	Title for the index page filtered by author.	Route
+single_route_title_part	CM Maps Routes Manager	Single route title part.	Route
+route_index_access_denied	Access denied.	Access denied message for route index page.	Route
+route_not_found	Route not found.	Message when trying to open not existing route.	Route
+route_distance	Distance	Route distance parameter.	Route
+route_duration	Time	Route duration parameter.	Route
+route_avg_speed	Speed	Route average speed parameter.	Route
+route_max_elevation	Peak	Route max elevation parameter.	Route
+route_min_elevation	Min altitude	Route min elevation parameter.	Route
+route_elevation_gain	Climb	Route elevation gain parameter.	Route
+route_elevation_descent	Descent	Route elevation descent parameter.	Route
+routes_index_summary	Displaying %d of %d routes.	Label for the routes number summary.	Route
+route_created	Created	Route created date.	Route
+route_updated	Updated	Route updated date.	Route
+route_save_success	Route has been saved.	Success message after saving route changes.	Route
+index_no_routes	No routes to display.	Message when no routes to display.	Route
+elevation_graph_alt_tooltip	Alt: %s	Altitude tooltip on the elevation graph.	Route
+elevation_graph_dist_from_start_tooltip	Dist from start: %s	Distance from start tooltip on the elevation graph.	Route
+
+locations	Locations	Label for the route's locations.	Location
+location_name	Location name	Field name for location name.	Location
+location_latitude	Latitude	Field name for location latitude.	Location
+location_longitude	Longitude	Field name for location longitude.	Location
+location_linktext	Link Text	Field name for location link text.	Location
+location_linkurl	Link URL	Field name for location link url.	Location
+location_distance	Distance (from start)	Field name for location distance.	Location
+location_altitude	Altitude	Location's altitude.	Location
+location_description	Description	Field name for location description.	Location
+location_address	Address	Location's address.	Location
+locations_markers	Location markers	Location markers	Location
+
+dashboard_edit_route_title	Edit route	Title of the Edit route page.	Dashboard
+dashboard_my_routes_title	My routes	Title of the My routes index page.	Dashboard
+dashboard_add_route_title	Add route	Title of the Add route page.	Dashboard
+dashboard_access_denied_msg	Access denied.	Message when trying to open a route without having access.	Dashboard
+dashboard_unknown_action_msg	Unknown action.	Message when trying to call not existing action.	Dashboard
+dashboard_location_remove_btn	Remove Location	Remove location button label.	Dashboard
+dashboard_location_convert_btn	Convert to waypoint	Button to convert location into waypoint	Dashboard
+dashboard_save_btn	Save	Save button label.	Dashboard
+dashboard_save_draft_btn	Save Draft	Save draft button label.	Dashboard
+dashboard_remove_btn	Remove Route	Remove route button label.	Dashboard
+dashboard_routes_actions	Actions	Dashboard route index actions column.	Dashboard
+dashboard_view	View	View button label.	Dashboard
+dashboard_edit	Edit	Edit button label.	Dashboard
+dashboard_delete	Delete	Delete button label.	Dashboard
+confirm_delete_msg	Do you really want to delete?	Confirmation message on delete action.	Dashboard
+dashboard_no_routes	No routes.	Message when found no routes.	Dashboard
+dashboard_new_location	Location #%d	Default label for new location.	Dashboard
+dashboard_use_minor_length_units	Use only meters/feet instead of kilometers/miles	Label for the minor units option.	Dashboard
+dashboard_path_color	Path color	Label for path color field.	Dashboard
+dashboard_cta_button	CTA button	Label for CTA button field.	Dashboard
+dashboard_cta_button_text	Text	Label for CTA button text field placeholder text.	Dashboard
+dashboard_cta_button_url	Absolute URL	Label for CTA button URL field placeholder text.	Dashboard
+dashboard_map_search	Find location...	Label for the map search input field.	Dashboard
+dashboard_image_open	Open image	Open image button label.	Dashboard
+dashboard_images_description	Drag images/videos to change the order.	Description of the images field.	Dashboard
+dashboard_image_remove	Remove image	Open image button label.	Dashboard
+dashboard_upload_image	Upload images & videos:	Upload image.	Dashboard
+dashboard_video_add_btn	Add video	Add video button.	Dashboard
+instructions_btn	Instructions	Instructions button.	Dashboard
+route_terms	I accept the <a href="#" target="_blank">Terms & Conditions</a>	Route's terms & conditions.	Dashboard
+editor_add_locations_mode_btn_text	Add markers	Label for the editor's button to enable creating markers mode.	Dashboard
+editor_add_locations_mode_btn_desc	Add markers for the points of interests	Description of the editor's button to enable creating markers mode.	Dashboard
+editor_draw_path_mode_btn_text	Draw the route	Label for the editor's button to enable drawing route polyline mode.	Dashboard
+editor_draw_path_mode_btn_desc	Draw the route's polyline path	Description of the editor's button to enable drawing route polyline mode.	Dashboard
+recalculate_route_params	Recalculate route parameters	Recalculate route parameters.	Dashboard
+recalculate_custom_params	Recalculate custom parameters	Recalculate route parameters.	Dashboard
+load_google_images	Load Google Images	Load Google Images button text.	Dashboard
+
+widget_title_related_routes	Related routes	"Related routes" widget title	Widgets
+widget_edit_text	Edit	"Edit" widget edit link text	Widgets

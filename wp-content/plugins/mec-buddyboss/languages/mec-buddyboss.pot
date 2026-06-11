@@ -1,0 +1,385 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Mec Buddyboss\n"
+"POT-Creation-Date: 2025-12-16 12:14+0330\n"
+"PO-Revision-Date: 2021-07-18 09:19+0430\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: mec-buddyboss.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: core/add_event.php:37 core/lib/frontend.php:634
+#: core/templates/events_created_booked.php:40
+#: core/templates/group-events.php:27
+msgid "Event List"
+msgstr ""
+
+#: core/add_event.php:39 core/lib/frontend.php:647
+#: core/templates/events_created_booked.php:42
+#: core/templates/group-events.php:29
+msgid "Booked Events"
+msgstr ""
+
+#: core/add_event.php:41 core/lib/frontend.php:72 core/lib/frontend.php:392
+#: core/lib/frontend.php:423 core/lib/frontend.php:455
+#: core/lib/frontend.php:625 core/templates/events_created_booked.php:44
+#: core/templates/group-events.php:31
+msgid "Events"
+msgstr ""
+
+#: core/add_event.php:50 core/templates/events_created_booked.php:53
+#: core/templates/group-events.php:40
+msgid "Create New"
+msgstr ""
+
+#: core/add_event.php:63 core/add_event.php:64 core/add_event.php:67
+#: core/templates/events_created_booked.php:66
+#: core/templates/events_created_booked.php:67
+#: core/templates/events_created_booked.php:70
+#: core/templates/group-events.php:53 core/templates/group-events.php:54
+#: core/templates/group-events.php:57
+msgid "Search Events"
+msgstr ""
+
+#: core/add_event.php:80 core/templates/events_created_booked.php:83
+#: core/templates/group-events.php:70
+msgid "Select Category"
+msgstr ""
+
+#: core/checkLicense/puc/Puc/v4p11/Plugin/Ui.php:54
+msgid "View details"
+msgstr ""
+
+#: core/checkLicense/puc/Puc/v4p11/Plugin/Ui.php:77
+#, php-format
+msgid "More information about %s"
+msgstr ""
+
+#: core/checkLicense/puc/Puc/v4p11/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr ""
+
+#: core/checkLicense/puc/Puc/v4p11/Plugin/Ui.php:214
+#, php-format
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr ""
+
+#: core/checkLicense/puc/Puc/v4p11/Plugin/Ui.php:216
+#, php-format
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr ""
+
+#: core/checkLicense/puc/Puc/v4p11/Plugin/Ui.php:218
+#, php-format
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr ""
+
+#: core/checkLicense/puc/Puc/v4p11/Plugin/Ui.php:224
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr ""
+
+#: core/checkLicense/puc/Puc/v4p11/Vcs/PluginUpdateChecker.php:100
+msgid "There is no changelog available."
+msgstr ""
+
+#: core/checkLicense/update-activation.php:261
+msgid ""
+"Activation failed. Please check your purchase code or license type."
+"<br><b>Note: Your purchase code should match your licesne type.</b>"
+msgstr ""
+
+#: core/checkLicense/update-activation.php:261
+msgid "Troubleshooting"
+msgstr ""
+
+#: core/lib/admin.php:162 core/lib/admin.php:173
+msgid "MEC Settings"
+msgstr ""
+
+#: core/lib/admin.php:166 core/lib/admin.php:178
+msgid "MEC Gutenberg Blocks"
+msgstr ""
+
+#: core/lib/admin.php:217
+msgid "Allow MEC events on this site"
+msgstr ""
+
+#: core/lib/admin.php:231
+msgid "Allow MEC events in social groups"
+msgstr ""
+
+#: core/lib/admin.php:245
+msgid "Enable user event menu"
+msgstr ""
+
+#: core/lib/admin.php:259
+msgid "Allow MEC social groups to Assign Events"
+msgstr ""
+
+#: core/lib/admin.php:273
+msgid "Allow MEC events in social filters"
+msgstr ""
+
+#: core/lib/admin.php:287
+msgid "Hide button \"Back to events list\" in Event Submission Form"
+msgstr ""
+
+#: core/lib/admin.php:301
+msgid "Show preview in activity"
+msgstr ""
+
+#: core/lib/admin.php:332
+msgid "Hide group events from skins"
+msgstr ""
+
+#: core/lib/admin.php:349
+msgid "Show single event if event is in public group for all users "
+msgstr ""
+
+#: core/lib/admin.php:403
+msgid "Select roles that have access to submission events"
+msgstr ""
+
+#: core/lib/admin.php:448
+msgid "Enable MEC"
+msgstr ""
+
+#: core/lib/admin.php:458
+msgid "DateTime Format"
+msgstr ""
+
+#: core/lib/admin.php:465
+msgid "Events Menu"
+msgstr ""
+
+#: core/lib/admin.php:473
+msgid "Event Groups"
+msgstr ""
+
+#: core/lib/admin.php:481
+msgid "Assign Event to Groups"
+msgstr ""
+
+#: core/lib/admin.php:489
+msgid "Hide Events"
+msgstr ""
+
+#: core/lib/admin.php:496
+msgid "Show Public Events"
+msgstr ""
+
+#: core/lib/admin.php:504
+msgid "Enable Filters"
+msgstr ""
+
+#: core/lib/admin.php:511
+msgid "Hide Button"
+msgstr ""
+
+#: core/lib/admin.php:518
+msgid "Show Preview"
+msgstr ""
+
+#: core/lib/admin.php:525
+msgid "Event submission roles"
+msgstr ""
+
+#: core/lib/admin.php:532
+msgid "Event submission exclude users"
+msgstr ""
+
+#: core/lib/feeds.php:51
+msgid "New MEC Event"
+msgstr ""
+
+#: core/lib/feeds.php:61
+msgid "Added event to group"
+msgstr ""
+
+#: core/lib/feeds.php:71
+msgid "Removed event to group"
+msgstr ""
+
+#: core/lib/feeds.php:114
+#, php-format
+msgid "%1$s scheduled a MEC Event %2$s in the group %3$s"
+msgstr ""
+
+#. translators: %1$s - user link, %2$s - group link.
+#: core/lib/feeds.php:171
+#, php-format
+msgid "%1$s scheduled a MEC Event in the group %2$s"
+msgstr ""
+
+#: core/lib/feeds.php:281
+#, php-format
+msgid "%1$s added event \"%2$s\" to the group %3$s"
+msgstr ""
+
+#: core/lib/feeds.php:293
+#, php-format
+msgid "%1$s removed event \"%2$s\" from the group %3$s"
+msgstr ""
+
+#: core/lib/frontend.php:161
+#, php-format
+msgid ""
+"You Cannot Access to Event. You must be a member of one of the following "
+"groups to view. %1s"
+msgstr ""
+
+#: core/lib/frontend.php:187
+msgid "BuddyBoss Group"
+msgstr ""
+
+#: core/lib/frontend.php:211
+msgid "BuddyBoss Group Selection"
+msgstr ""
+
+#: core/lib/frontend.php:231 core/templates/event_content.php:20
+msgid "Assign To Group"
+msgstr ""
+
+#: core/lib/frontend.php:234
+msgid "Select BuddyBoss group for access the event."
+msgstr ""
+
+#: core/lib/frontend.php:241 core/lib/frontend.php:294
+#: core/lib/frontend.php:907 core/templates/event_content.php:44
+msgid "Group not found!"
+msgstr ""
+
+#: core/lib/frontend.php:245
+msgid "Select  Group"
+msgstr ""
+
+#: core/lib/frontend.php:278 core/templates/event_content.php:29
+msgid "Select Group"
+msgstr ""
+
+#: core/lib/frontend.php:404
+msgid "Create Event"
+msgstr ""
+
+#: core/lib/frontend.php:539
+msgid "Group MEC Settings"
+msgstr ""
+
+#: core/lib/frontend.php:546 core/lib/frontend.php:549
+msgid "Group Permissions"
+msgstr ""
+
+#: core/lib/frontend.php:550
+msgid ""
+"Which members of this group are allowed to create, edit and delete MEC "
+"Events?"
+msgstr ""
+
+#: core/lib/frontend.php:554
+msgid "All group members"
+msgstr ""
+
+#: core/lib/frontend.php:559
+msgid "Organizers and Moderators only"
+msgstr ""
+
+#: core/lib/frontend.php:564
+msgid "Organizers only"
+msgstr ""
+
+#: core/lib/frontend.php:575
+msgid "Save Settings"
+msgstr ""
+
+#: core/lib/frontend.php:656
+msgid "Add Event"
+msgstr ""
+
+#: core/lib/frontend.php:852 core/lib/frontend.php:864
+msgid "BuddyBoss Groups"
+msgstr ""
+
+#: core/lib/frontend.php:867
+msgid "Include By Group"
+msgstr ""
+
+#: core/lib/frontend.php:877
+msgid "Exclude By Group"
+msgstr ""
+
+#: core/lib/frontend.php:888
+msgid "Groups"
+msgstr ""
+
+#: core/lib/integration.php:11
+msgid "MEC"
+msgstr ""
+
+#: core/templates/event-404.php:11
+msgid "You Cannot Access to Event. Please Contact to group admin."
+msgstr ""
+
+#: core/templates/event-404.php:19
+msgid "Access Limited"
+msgstr ""
+
+#: core/templates/event_content.php:40
+msgid "Assign"
+msgstr ""
+
+#: core/templates/event_content.php:58 core/templates/loop-event-list.php:22
+msgid "Start"
+msgstr ""
+
+#: core/templates/event_content.php:80 core/templates/loop-event-list.php:24
+msgid "End"
+msgstr ""
+
+#: core/templates/event_content.php:89
+msgid "Event Link"
+msgstr ""
+
+#: core/templates/event_content.php:105
+msgid "Edit Link"
+msgstr ""
+
+#: core/templates/event_content.php:110
+msgid "Edit"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "BuddyBoss Integration"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://webnus.net/modern-events-calendar"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "An integration between MEC and BuddyBoss."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Webnus"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://webnus.net"
+msgstr ""

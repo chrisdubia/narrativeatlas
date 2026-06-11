@@ -1,0 +1,21 @@
+{
+    "name": "ademti/wordpress-plugin-updater",
+    "description": "Ademti : WordPress Plugin Updater",
+    "homepage": "https://ademti-software.co.uk/",
+    "authors": [
+        {
+            "name": "Lee Willis",
+            "email": "tech@ademti-software.co.uk",
+            "homepage": "https://www.ademti-software.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Ademti\\WordPress\\": "src/"
+        }
+    }
+}

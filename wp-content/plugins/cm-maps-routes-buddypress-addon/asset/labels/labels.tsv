@@ -1,0 +1,13 @@
+buddypress_settings_page_title	CM Maps Routes	CM Maps Routes BuddyPress settings page title.	BuddyPress
+buddypress_menu_title	CM Maps Routes	CM Maps Routes BuddyPress menu title.	BuddyPress
+buddypress_profile_maps_tab	Maps	Maps tab in the BuddyPress user's profile.	BuddyPress
+buddypress_profile_our_maps_tab	Our Maps	Our Maps tab in the BuddyPress groups page.	BuddyPress
+buddypress_profile_manage_maps_tab	Manage Maps	Manage Maps tab in the BuddyPress user's profile.	BuddyPress
+buddypress_profile_show_map	Show Map	Show map button.	BuddyPress
+buddypress_activity_map_created	has created new route!	Activity message when user creates new route (with username in front of it).	BuddyPress
+buddypress_groups	My Groups	Groups label for add/edit route form	BuddyPress
+buddypress_collaborative	Collaborative - other people in your group can add to your map	Groups label for add/edit route form	BuddyPress
+buddypress_collaborative_text	Collaborative	Collaborative	BuddyPress
+buddypress_collaborative_tooltip_text	Other people in your group can add to your map	Collaborative tooltip text	BuddyPress
+buddypress_collaborative_yes	Yes	Yes	BuddyPress
+buddypress_collaborative_no	No	No	BuddyPress

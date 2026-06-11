@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+	<Document>
+		<name>{{routeName}}</name>
+		<open>1</open>
+		<description><![CDATA[{{routeDescription}}]]></description>
+		<ExtendedData>
+			{{routeExtendedData}}
+		</ExtendedData>
+		{{placemarks}}
+		<Placemark>
+			<styleUrl>#cmRoutePathStyle</styleUrl>
+			<name>{{routeName}}</name>
+			<description><![CDATA[
+				<table>
+					<tr><td>Distance:</td><td>{{distance}}</td></tr>
+					<tr><td>Elapsed Time:</td><td>{{duration}}</td></tr>
+					<tr><td>Avg Speed:</td><td>{{speed}}</td></tr>
+					<tr><td>Min Altitude:</td><td>{{minAltitude}}</td></tr>
+					<tr><td>Max Altitude:</td><td>{{maxAltitude}}</td></tr>
+					<tr><td>Climb:</td><td>{{climb}}</td></tr>
+					<tr><td>Descent:</td><td>{{descent}}</td></tr>
+				</table>
+			]]></description>
+			<MultiGeometry>
+				<LineString>
+					<tessellate>1</tessellate>
+					<altitudeMode>clampToGround</altitudeMode>
+					<coordinates>{{pathCoordinates}}</coordinates>
+				</LineString>
+			</MultiGeometry>
+		</Placemark>
+		<Style id="cmRoutePathStyle">
+			<LineStyle>
+				<width>6.0</width>
+				<color>7dff0000</color>
+			</LineStyle>
+		</Style>
+		<Style id="cmRouteLocationStartStyle">
+			<IconStyle>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/ms/micons/green-dot.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<Style id="cmRouteLocationMiddleStyle">
+			<IconStyle>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/ms/micons/orange-dot.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<Style id="cmRouteLocationEndStyle">
+			<IconStyle>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/ms/micons/red-dot.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<Style id="cmRouteLocationWaypointStyle">
+			<IconStyle>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/ms/micons/blue.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+	</Document>
+</kml>

@@ -1,0 +1,59 @@
+.right {float: right;}
+tr.cmmrm-category th {font-weight: bold; background: #e0e0e0; color: black;}
+.cmmrm-stats-user-table thead th:first-child, tr.cmmrm-channel td:first-child {padding-left:2em;}
+.cmmrm-stats-user-table tr:nth-child(even) {background: #f6f6f6;}
+.cmmrm-pagination, .cmmrm-pagination li {list-style: none; margin: 0; padding: 0;}
+.cmmrm-pagination li {display: inline-block;}
+.cmmrm-pagination a {display: inline-block; padding: 0.5em 1em; font-size: 14px; text-decoration: none; font-weight: bold; background: #f0f0f0; border: 1px solid #cccccc; color: #777777;}
+.cmmrm-pagination a:hover {color: black; border-color: #999999;}
+.cmmrm-pagination .current-page a {background: white; color: black;}
+.cmmrm-mp-cost-add {margin-top: 1em;}
+.cmmrm-get-pro {background: white; padding: 1em; width: 450px; border: solid 1px #dddddd; margin: 0 auto;}
+.cmmrm-get-pro, .cmmrm-get-pro p {font-size: 110%;}
+.cmmrm-get-pro p {margin: 0;}
+.cmmrm-get-pro .center {text-align: center;}
+.cmmrm-get-pro a.button {font-size: 120%; font-weight: bold; padding: 0 2em; line-height: 2em; height: 2em; background: #006699; color: white; margin: 1em 0;}
+.cmmrm-pro-features {list-style: none;}
+.cmmrm-pro-features li {margin: 0;}
+.cmmrm-pro-features li:before {content: "\f147"; display: inline-block; padding-right: 5px; -webkit-font-smoothing: antialiased; font: normal 30px 'dashicons'; vertical-align: middle; color: #009900; cursor: default; }
+.cmmrm-report-table td {height: 2em;}
+.cmmrm-report-row-filter {margin-left: 1em; display: none; border: 1px solid #cccccc; background: #f0f0f0; color: #333333; padding: 3px 0.5em; float: right; font-size: 10px;}
+td:hover .cmmrm-report-row-filter, .cmmrm-report-row-filter:active {display: inline-block;}
+.cmmrm-report-table .cmmrm-actions, .cmmrm-report-table .cmmrm-actions li {list-style: none; display: inline-block; margin: 0; padding: 0;}
+.cmmrm-report-table .cmmrm-actions a {padding: 0 0.5em 0 0;}
+.cmmrm-subscription-add-form .inner {background: white; padding: 1em; margin-bottom: 1em; border: solid 1px #e0e0e0;}
+.cmmrm-subscription-add-form .inner.closed {display: none;}
+.cmmrm-subscription-add-form select {vertical-align: top;}
+.cmmrm-subscription-add-form input[type=text] {width: 8em;}
+.cmmrm-subscription-add-form input[type=number] {width: 5em;}
+.cmmrm-subscription-add-form label {margin-right: 1em;}
+.cmmrm-subscription-add-form input[type=submit] {padding-left: 1em; padding-right: 1em;}
+.cmmrm-subscription-add-form .cmmrm-subscription-add-post {display: none;}
+#cmmrm-import-frame {display: none; width: 100%; height: 300px;}
+#cmmrm-import-frame-csv {display: none; width: 100%; height: 300px;}
+.cmmrm-block {background: white; padding: 1em; width: 600px; border: solid 1px #dddddd; margin: 2em 2em 2em 0; float: left;}
+.cmmrm-block h3 {margin-top: 0 !important;}
+.cmmrm-admin-notice {position: relative; padding-right: 30px !important;}
+.cmmrm-admin-notice .cmmrm-dismiss {position: absolute; top: 10px; right: 10px; text-decoration: none; background: #aaaaaa; color: white; border-radius: 15px 15px; width: 15px; height: 15px; text-align: center; font-size: 15px; font-weight: bold; line-height: 15px;}
+#settings {clear: both;}
+.cmmrm-custom-tax-setting .cmmrm-custom-tax-item {margin-bottom: 1em; border-bottom: 1px solid #d0d0d0; padding-bottom: 1em;}
+.cmmrm-custom-tax-setting .cmmrm-custom-tax-item span {display: block; width: 10em; float: left;}
+.cmmrm-custom-tax-setting label {display: block; margin-bottom: 0.5em;}
+.cmmrm-custom-tax-setting input[type=text] {max-width: 70% !important;}
+.cmmrm-custom-tax-setting .cmmmrm-custom-tax-delete {text-align: right;}
+th#cmmrm_col_route_id, td.column-cmmrm_col_route_id {width: 30px; white-space: nowrap;}
+.cmmrm-embed-shortcode textarea {width: 100%; height: 2em; background: #f0f0f0;}
+.cmmrm-shortcode-desc {margin: 2em 0;}
+.cmmrm-shortcode-desc header {background: #f0f0f0; padding: 0.5em; display: flex;}
+.cmmrm-shortcode-desc header h4 {font-size: 150%; flex: 0 0 1; margin: 0; padding: 0;}
+.cmmrm-shortcode-desc span {flex: 1; text-align: right;}
+.cmmrm-shortcode-desc-inner {margin: 0 2em;}
+.cmmrm-shortcode-desc-inner h5 {font-size: 150%; font-weight: normal; border-bottom: 1px dashed #c0c0c0; padding-bottom: 0.2em; margin: 1em 0;}
+.cmmrm-shortcode-desc-inner ul li {margin-left: 2em; list-style-type: disc;}
+.cmmrm-shortcode-desc-inner p {margin: 1em 0;}
+
+.cmmrm-map-tile-setting .cmmrm-map-tile-item {margin-bottom: 1em; border-bottom: 1px solid #d0d0d0; padding-bottom: 1em; float:left; width:100%;}
+.cmmrm-map-tile-setting .cmmrm-map-tile-item span {display: block; width: 12em; float: left;}
+.cmmrm-map-tile-setting label {display: block; margin-bottom: 0.5em;}
+.cmmrm-map-tile-setting input[type=text] {max-width: 70% !important;}
+.cmmrm-map-tile-setting .cmmrm-map-tile-delete {text-align: right;}

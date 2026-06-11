@@ -1,0 +1,102 @@
+.bp-events-block-create .components-placeholder__fieldset {
+	flex-direction: column;
+}
+
+.bp-events-block-create .components-placeholder__fieldset > .components-button.is-link {
+	text-decoration: none;
+	display: inline-block;
+	text-align: right;
+	padding: 0;
+	margin: 0 0 15px;
+}
+
+.bp-events-block-create .components-base-control__field {
+	display: flex;
+	margin: 0;
+}
+
+.bp-events-block-create .components-base-control__label {
+	flex: 0 0 110px;
+	padding-right: 10px;
+	line-height: 1;
+	padding-top: 8px;
+}
+
+.bp-events-block-create .components-select-control__input {
+	max-width: 100%;
+}
+
+.bp-events-block-create button.components-button.is-primary {
+	justify-content: center;
+}
+
+.bp-events-block-create .bb-events-time-wrap .components-button {
+	line-height: 1px;
+	margin: 0;
+}
+
+.components-base-control.bb-buttons-wrap {
+	flex: 0 0 100%;
+	margin: 10px 0 0;
+}
+
+.components-base-control.bb-buttons-wrap .components-base-control__field {
+	padding-left: 112px;
+}
+
+.bb-events-id-wrap {
+	width: 100%;
+}
+
+.bb-events-id-wrap .components-base-control__field {
+	display: flex;
+}
+
+.bb-events-id-wrap .components-base-control__label {
+	flex: 0 0 110px;
+	padding-right: 10px;
+	line-height: 1;
+	padding-top: 8px;
+}
+
+.bb-events-id-input-container .components-placeholder__label > span,
+.bp-events-block-create .components-placeholder__label > span,
+.webinar_block_title .components-placeholder__label > span,
+.events_block_title .components-placeholder__label > span {
+	margin-right: 10px;
+}
+
+.bb-events-id-input-container .bb-events-time-wrap time .components-button.is-link,
+.bp-events-block-create .bb-events-time-wrap time .components-button.is-link,
+.webinar_block_title .bb-events-time-wrap time .components-button.is-link,
+.events_block_title .bb-events-time-wrap time .components-button.is-link {
+	text-decoration: none;
+	box-shadow: none;
+}
+
+.bb-events-id-input-container .bb_inline_selectBox,
+.bp-events-block-create .bb_inline_selectBox,
+.webinar_block_title .bb_inline_selectBox,
+.events_block_title .bb_inline_selectBox {
+	display: inline-block;
+}
+
+.bb-events-id-input-container .bb_inline_selectBox .components-flex__item,
+.bp-events-block-create .bb_inline_selectBox .components-flex__item,
+.webinar_block_title .bb_inline_selectBox .components-flex__item,
+.events_block_title .bb_inline_selectBox .components-flex__item {
+	width: 105px;
+	display: inline-block;
+}
+
+.bb-events-id-input-container .bb_inline_selectBox .components-input-control__container,
+.bp-events-block-create .bb_inline_selectBox .components-input-control__container,
+.webinar_block_title .bb_inline_selectBox .components-input-control__container,
+.events_block_title .bb_inline_selectBox .components-input-control__container {
+	width: calc(100% - 115px);
+	display: inline-block;
+}
+
+.popover-slot .components-popover__content {
+	padding: 10px;
+}

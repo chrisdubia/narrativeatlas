@@ -1,0 +1,19 @@
+html, body.cmmrm-embed {margin: 0 !important; padding: 0 !important; overflow: hidden;}
+.cmmrm-embed .cmmrm-shortcode-route-map {margin: 0 !important; color: #888888 !important; font-family: arial;}
+.cmmrm-embed .cmmrm-shortcode-route-map h2 {margin: 0 !important; padding: 0 10px; font-size: 18px !important; line-height: 35px !important;}
+.cmmrm-embed .cmmrm-shortcode-route-map h2, .cmmrm-embed .cmmrm-route-params {background: #fff; }
+.cmmrm-embed .cmmrm-shortcode-route-map h2, .cmmrm-embed .cmmrm-shortcode-route-map h2 a {color: #888888 !important; text-decoration: none;}
+.cmmrm-embed .cmmrm-shortcode-route-map h2 a {display: block;}
+.cmmrm-embed .cmmrm-route-map-canvas {height: 300px;}
+.cmmrm-embed .cmmrm-route-map {background: white;}
+.cmmrm-embed .cmmrm-route-params, .cmmrm-route-params, .cmmrm-route-editor ul.cmmrm-route-params, .cmmrm-route-single ul.cmmrm-route-params {margin: 0 !important; white-space: nowrap;}
+.cmmrm-embed .cmmrm-route-params, .cmmrm-embed .cmmrm-route-params strong, .cmmrm-embed .cmmrm-route-params span {color: #888888 !important;}
+.cmmrm-embed .cmmrm-route-params strong {font-size: 10px !important;}
+.cmmrm-embed .cmmrm-route-params span {font-size: 14px !important;}
+.cmmrm-embed .cmmrm-route-params {white-space: nowrap;}
+.cmmrm-embed .cmmrm-route-params li:first-child {border-left: none;}
+.cmmrm-embed .cmmrm-custom-elevation-graph {height: 85px !important; margin-top: -10px;}
+.zopim {display: none !important; visibility: hidden !important;}
+@media only screen and (max-width: 480px) {
+	.cmmrm-route-single ul.cmmrm-route-params li { float:left !important; margin-bottom:15px !important; }
+}

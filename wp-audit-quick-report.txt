@@ -1,0 +1,154 @@
+WP quick audit
+Generated: Fri Jan 30 15:49:42 UTC 2026
+
+Table prefix: wp_
+
+Core / PHP
+6.9
+PHP 8.1.34 (cli) (built: Dec 18 2025 16:14:52) (ZTS)
+Copyright (c) The PHP Group
+
+Plugins (active)
+name	status	update	version	update_version	auto_update
+bb-group-topic-creation-restriction	active	none	1.0.0		off
+bb-new-default-group-tab-options	active	none	1.0.0		off
+bulk-group-member-creator	active	none	1.0.0		off
+bp-messaging-control	active	none	1.8.0		off
+mec-buddyboss	active	none	2.6.0		off
+buddyboss-platform	active	none	2.18.0		off
+buddyboss-platform-pro	active	none	2.12.0		on
+buddypress-docs	active	none	2.2.6		off
+buddypress-dynamic-group-tab-content	active	none	1.0.2		off
+buddypress-group-email-subscription	active	none	4.2.4		off
+bp-group-export-cli	active	none	1.0		off
+buddypress-group-tabs-creator-pro	active	none	1.0.3		off
+miniorange-otp-verification(2)	active	none	62.8.26		off
+modern-events-calendar	active	none	7.29.0		off
+narrativeatlas-aws-transcoder	active	none	1.0.0		off
+google-captcha	active	none	1.85		off
+rename-wp-login	active	none	2.6.0		off
+say-what-pro	active	none	5.7.4		off
+user-insights-forum-participation	active	none	1.0.0		off
+users-insights	active	none	4.7.0		off
+wp-all-import-pro	active	none	5.0.3		off
+wp-crontrol	active	none	1.21.0		off
+wp-mail-smtp-pro	active	none	4.7.1		off
+amazon-s3-and-cloudfront-pro	active	none	3.2.12		off
+
+Cron (first 40)
+hook	next_run	recurrence
+action_scheduler_run_queue	2026-01-30 10:49:12	1 minute
+bb_activity_publish	2026-01-30 10:49:45	1 minute
+bp_zoom_meeting_alerts_hook	2026-01-30 10:50:21	5 minutes
+bp_zoom_webinar_alerts_hook	2026-01-30 10:52:58	5 minutes
+bb_bg_log_clear_hourly	2026-01-30 10:56:53	1 hour
+check_email_trigger_notify_email_when_log_threshold_met	2026-01-30 11:11:36	1 hour
+wp_privacy_delete_old_export_files	2026-01-30 11:22:32	1 hour
+mm_cron_hourly	2026-01-30 11:38:06	1 hour
+mec_syncScheduler	2026-01-30 11:39:03	1 day
+mec_scheduler	2026-01-30 11:39:03	1 hour
+hourlySync	2026-01-30 13:12:23	1 day
+simple_history/maybe_purge_db	2026-01-30 13:30:59	1 day
+wp_update_user_counts	2026-01-30 13:36:55	12 hours
+wp_scheduled_auto_draft_delete	2026-01-30 14:43:26	1 day
+wpmudev_scheduled_jobs	2026-01-30 15:28:40	12 hours
+wp_version_check	2026-01-30 16:37:26	12 hours
+wp_update_plugins	2026-01-30 16:37:26	12 hours
+wp_update_themes	2026-01-30 16:37:26	12 hours
+wp_scheduled_delete	2026-01-30 16:38:06	1 day
+delete_expired_transients	2026-01-30 16:38:06	1 day
+mm_cron_daily	2026-01-30 16:38:06	1 day
+mm_cron_twicedaily	2026-01-30 16:38:06	12 hours
+deliciousbrains_wp_offload_ses_log_cleanup	2026-01-30 17:25:07	1 day
+bb_activity_post_feature_image_delete_orphaned_attachments_hook	2026-01-30 19:00:00	1 day
+puc_cron_check_updates-mec-buddyboss	2026-01-30 19:29:10	12 hours
+buddyboss-theme_check_license_status_event	2026-01-30 21:46:00	12 hours
+bb-platform_check_license_status_event	2026-01-30 22:11:01	12 hours
+bb-web_check_license_status_event	2026-01-30 22:11:11	12 hours
+bb_daily_draft_cleanup_event	2026-01-30 22:30:00	1 day
+bb_bg_log_clear	2026-01-30 23:59:59	1 day
+ass_digest_event	2026-01-31 00:00:00	1 day
+puc_cron_check_updates-mec	2026-01-31 00:57:53	1 day
+bp_video_delete_orphaned_attachments_hook	2026-01-31 07:29:32	1 day
+bp_media_delete_orphaned_attachments_hook	2026-01-31 08:47:50	1 day
+bp_document_delete_orphaned_attachments_hook	2026-01-31 08:48:06	1 day
+buddyboss_updater_schedule_daily	2026-01-31 09:05:39	1 day
+buddyboss-theme_ipn_clean	2026-01-31 09:46:05	1 day
+buddyboss-theme_ipn_remote_fetch	2026-01-31 09:46:05	1 day
+siteground_optimizer_check_assets_dir	2026-01-31 09:56:55	1 day
+
+Top tables by size (top 25)
+TABLE_NAME	size_mb
+wp_check_email_log	243.52
+wp_bb_background_process_logs	23.80
+wp_bp_notifications	23.68
+wp_postmeta	19.66
+wp_posts	16.30
+wp_usermeta	15.71
+wp_bp_notifications_meta	9.70
+wp_gamipress_logs_meta	7.55
+wp_as3cf_items	5.55
+wp_wpmailsmtp_debug_events	5.52
+wp_say_what_available_strings	4.03
+wp_options	3.56
+wp_gamipress_logs	3.06
+wp_bp_messages_meta	3.04
+wp_bp_activity	2.61
+wp_bp_media	1.91
+wp_pmxi_imports	1.52
+wp_elfsight_youtube_gallery_widgets	1.52
+wp_bp_activity_meta	1.36
+wp_bp_messages_messages	1.13
+wp_signups	1.10
+wp_bb_reactions_data	0.81
+wp_buddyboss_media	0.70
+wp_bp_messages_recipients	0.66
+wp_bp_suspend	0.58
+
+
+BuddyBoss messages / notifications sizes and counts
+TABLE_NAME	size_mb
+wp_bp_notifications	23.68
+wp_bp_notifications_meta	9.70
+wp_bp_messages_meta	3.04
+wp_bp_messages_messages	1.13
+wp_bp_messages_recipients	0.66
+wp_bp_messages_notices	0.00
+
+
+bp_notifications_rows
+0
+
+notifications_meta_rows
+0
+
+messages_rows
+0
+
+recipients_rows
+0
+
+messages_meta_rows
+0
+
+notices_rows
+0
+
+
+Orphans
+orphaned_postmeta
+0
+
+orphaned_notification_meta
+0
+
+expired_transients
+1
+
+
+Autoload size
+autoload_mb
+0.37
+
+
+Done.

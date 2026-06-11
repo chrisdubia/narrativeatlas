@@ -1,0 +1,54 @@
+.bulk-group-member-creator-wrap > div {
+    width: 45%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    margin-left: 10px;
+    float: left;
+}
+.bulk-group-member-creator-wrap.right-side {
+    max-height: 400px;
+    overflow-y: auto;
+}
+.bulk-group-member-creator-wrap label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.bulk-group-member-creator-wrap textarea {
+    padding: 5px;
+    width: 100%;
+}
+input#bulk-group-member-creator-autocomplete {
+    width: 100%;
+    padding: 5px;
+}
+#bulk-group-member-creator-group-list li {
+    display: flex;
+    padding: 5px;
+    border: 1px solid lightgrey !important;
+    position: relative;
+    align-items: center;
+}
+#bulk-group-member-creator-group-list li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+#bulk-group-member-creator-group-list li a {
+    text-decoration: none;
+}
+span.bulk-group-member-creator-remove-group {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#bgmu-logs {
+    max-height: 500px;
+    overflow-y:auto;
+}

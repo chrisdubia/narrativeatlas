@@ -1,0 +1,73 @@
+search_placeholder	Search text...	Search input palceholder.	Navigation
+search_btn	Search	Search button label.	Navigation
+menu_import_route	Import route	Import menu item.	Navigation
+route_category	Route Category	Singular "Route Category" label.	Navigation
+route_categories	Route Categories	Plural "Route Categories" label.	Navigation
+categories	Categories	"Categories" label on the route page.	Navigation
+tags	Tags	"Tags" label on the route page.	Navigation
+filter_all_categories_opt	-- all categories --	Option "all categories" on the index page filter select box.	Navigation
+filter_option_show_all_custom_taxonomy_terms	-- all %s --	Option "all custom categories" on the index page filter select box.	Navigation
+filter_option_show_all_rates	All rates	All rates option for the index page filter.	Navigation
+filter_option_rating	Rating: %d	Show routes with specific rating option for the index page filter.	Navigation
+filter_zip_code	ZIP code:	ZIP code filter code label.	Navigation
+filter_zip_radius	Radius:	ZIP code filter radius label.	Navigation
+proximity_order_reload	We can sort the routes by the proximity of your location. Do you want to reload this page?	Reload prompt.	Navigation
+
+route_category	Category	Route category field name.	Route
+route_category_create	Add New Category	Add new category link text.	Route
+route_tags	Tags	Route tags field name.	Route
+route_export_kml	Export to KML file	Label for button to export route as KML file.	Route
+route_export_gpx	Export to GPX file	Label for button to export route as GPX file.	Route
+rate_btn_title	Rate: %d	Rate button title.	Route
+route_embed_btn	Embed	Embed	Route
+route_embed_iframe	Embed route on your website.	Embed route on your website button.	Route
+route_embed_copy_html	Copy the following HTML iframe code to your website:	Copy iframe HTML text for embed route feature.	Route
+route_embed_copy_to_clipboard	Copy to clipboard	Copy to clipboard	Route
+route_login_for_download	Login for Download GPX/KML	Login for Download GPX/KML	Route
+
+route_status_pending	Pending review	Pending review status for route.	Moderation
+route_save_success_pending	It's pending for the moderator review.	Success message after route save and it's pending review.	Moderation
+moderation_user_email_action_accept	accepted	"Accepted" work in the notification email.	Moderation
+moderation_user_email_action_trash	trashed	"Trashed" work in the notification email.	Moderation
+moderation_msg_published	Route has been published.	Route has been published message.	Moderation
+moderation_msg_trashed	Route has been trashed.	Route has been trashed message.	Moderation
+moderation_msg_return_to_website	Return to website	Return to website link for moderator.	Moderation
+
+check_weather	Check the weather	Check the weather label.	Location
+
+dashboard_import_route_title	Import KML/GPX	Label for the Import KML/GPX page title.	Dashboard
+dashboard_import_form_desc	Select KML, KMZ or GPX file to import:	Label for the Import form.	Dashboard
+dashboard_import_loader_text	Please wait, this may take a while...	Loader text during importing route.	Dashboard
+dashboard_import_form_submit_btn	Import	Label for the Import submit button.	Dashboard
+dashboard_import_max_waypoints	Waypoints density (high waypoints number may cause some performance issues):	Label for input for waypoints density to import.	Dashboard
+dashboard_show_weather_per_location	Show weather per each location (disabled to show it once per trail)	Label for the weather option.	Dashboard
+dashboard_show_directional_arrows	Show directional arrows for the trail path	Route settings to enable/disable directional arrows.	Dashboard
+dashboard_show_locations_section	Show locations section under the map on the single route page	Route settings to enable/disable locations section.	Dashboard
+editor_import_kml_gpx	Import KML, KMZ or GPX file	Import label on the editor page.	Dashboard
+editor_import_kml_gpx_warning	Warning: existing locations will be removed.	Import warning on the editor page.	Dashboard
+dashboard_location_icon_choose_btn	Set icon	Set icon for location button.	Dashboard
+dashboard_location_icon_remove_btn	Remove icon	Remove icon for location button.	Dashboard
+dashboard_location_icon_size	Icon size:	Icon size label.	Dashboard
+location_icon_size_large	large	Large icon size label.	Dashboard
+location_icon_size_normal	normal	Normal icon size label.	Dashboard
+location_icon_size_small	small	Small icon size label.	Dashboard
+location_open_info_window	Open info window by default	Open info window by default	Dashboard
+location_generate_waze_button	Generate waze button	Generate waze button	Dashboard
+dashboard_show_path_outline	Show path outline	Show path outline	Dashboard
+dashboard_hide_on_index	Hide on index page	Hide on index page	Dashboard
+dashboard_route_settings	Route settings	Route settings	Dashboard
+dashboard_elevation_graph_settings_header	Elevation graph	Elevation graph settings	Dashboard
+dashboard_show_slopes	Enable showing slopes	Enable showing slopes checkbox	Dashboard
+dashboard_show_slopes_label	Enable showing label slopes	Enable showing slopes label checkbox	Dashboard
+dashboard_slope_min_val	Slope minimum value [%]:	Slope minimum value	Dashboard
+dashboard_slope_min_width	Slope minimum width [pixels]:	Slope minimum width	Dashboard
+
+dashboard_slope_downward_color	Slope Downward Color:	Slope downward color	Dashboard
+dashboard_slope_upward_color	Slope Upward Color:	Slope upward color	Dashboard
+
+widget_title_tag_cloud	Routes tag cloud	Tag cloud widget title.	Widgets
+
+route_link_sharing	Link Sharing	Link Sharing	Link Sharing
+route_copy_route	Share Route	Share Route	Link Sharing
+route_copy_route_category	Share Category	Share Category	Link Sharing
+route_copied	Copied!	Copied!	Link Sharing
