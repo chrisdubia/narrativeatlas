@@ -1,137 +1,141 @@
-export const groups = [
-  {
-    id: '1',
-    name: 'Youth Parliament: Lviv–Omaha',
-    description: 'Students from Ukraine and Nebraska co-create policy proposals on climate, democracy, and human rights — then present to real decision-makers.',
-    category: 'Youth Exchange',
-    categoryColor: '#E8A838',
-    memberCount: 47,
-    activeToday: true,
-    cover: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%)',
-    icon: '🌍',
-    location: 'Lviv, UA · Omaha, US',
-    recentActivity: '2 hours ago',
-    organizers: ['Maya Chen', 'Dmytro Kovalenko', 'Sarah Mills'],
-  },
-  {
-    id: '2',
-    name: 'Climate Futures: Nairobi–Copenhagen',
-    description: 'Cross-continental youth climate scientists mapping local environmental data and building shared solutions across two very different worlds.',
-    category: 'Climate Action',
-    categoryColor: '#4CAF7D',
-    memberCount: 62,
-    activeToday: true,
-    cover: 'linear-gradient(135deg, #0d2818 0%, #1a4731 40%, #0d3320 100%)',
-    icon: '🌱',
-    location: 'Nairobi, KE · Copenhagen, DK',
-    recentActivity: '45 minutes ago',
-    organizers: ['Aisha Mwangi', 'Lars Eriksson'],
-  },
-  {
-    id: '3',
-    name: 'Civic Tech Fellows',
-    description: 'High schoolers and college students building digital tools for civic engagement — from voter guides to neighborhood mapping apps.',
-    category: 'Civic Tech',
-    categoryColor: '#7B68EE',
-    memberCount: 31,
-    activeToday: false,
-    cover: 'linear-gradient(135deg, #1a0a2e 0%, #2d1b69 40%, #1a0a3e 100%)',
-    icon: '⚡',
-    location: 'Global',
-    recentActivity: '1 day ago',
-    organizers: ['Jordan Park', 'Priya Nair'],
-  },
-  {
-    id: '4',
-    name: 'Ocean Stories: Pacific Voices',
-    description: 'Island youth documenting their changing coastlines through photography, mapping, and storytelling — creating an archive for climate science.',
-    category: 'Environment',
-    categoryColor: '#38B2E8',
-    memberCount: 28,
-    activeToday: true,
-    cover: 'linear-gradient(135deg, #0a1628 0%, #0d2a4a 40%, #0a1f3c 100%)',
-    icon: '🌊',
-    location: 'Fiji · Hawaii · Philippines',
-    recentActivity: '3 hours ago',
-    organizers: ['Tala Faleolo', 'Kenji Nakamura'],
-  },
-  {
-    id: '5',
-    name: 'Arts Without Borders',
-    description: 'Young artists from conflict zones and stable democracies creating collaborative work that crosses language, culture, and politics.',
-    category: 'Arts & Culture',
-    categoryColor: '#E85592',
-    memberCount: 54,
-    activeToday: false,
-    cover: 'linear-gradient(135deg, #2a0a1e 0%, #4a1535 40%, #2a0a28 100%)',
-    icon: '🎨',
-    location: 'Global',
-    recentActivity: '2 days ago',
-    organizers: ['Fatima Al-Rashid', 'Marco Rossi', 'Zoe Williams'],
-  },
-  {
-    id: '6',
-    name: 'Future Cities Lab',
-    description: 'Urban youth redesigning their neighborhoods — mapping infrastructure gaps, proposing solutions, and presenting to city planners.',
-    category: 'Urban Design',
-    categoryColor: '#E88338',
-    memberCount: 39,
-    activeToday: true,
-    cover: 'linear-gradient(135deg, #1a1208 0%, #3d2c10 40%, #2a1e08 100%)',
-    icon: '🏙️',
-    location: 'São Paulo · Detroit · Lagos',
-    recentActivity: '5 hours ago',
-    organizers: ['Carlos Mendez', 'Amara Osei'],
-  },
-];
+export interface Group {
+  id: string
+  name: string
+  description: string
+  memberCount: number
+  location: string
+  gradient: string
+  borderColor: string
+  tags: string[]
+  lastActive: string
+  organizer: string
+  featured: boolean
+}
 
-export const members = [
-  { id: '1', name: 'Maya Chen', role: 'Organizer', location: 'Omaha, US', flag: '🇺🇸', avatar: 'MC', color: '#E8A838', groups: 3, joined: 'Sep 2023' },
-  { id: '2', name: 'Dmytro Kovalenko', role: 'Organizer', location: 'Lviv, UA', flag: '🇺🇦', avatar: 'DK', color: '#4CAF7D', groups: 2, joined: 'Oct 2023' },
-  { id: '3', name: 'Aisha Mwangi', role: 'Member', location: 'Nairobi, KE', flag: '🇰🇪', avatar: 'AM', color: '#38B2E8', groups: 2, joined: 'Jan 2024' },
-  { id: '4', name: 'Lars Eriksson', role: 'Organizer', location: 'Copenhagen, DK', flag: '🇩🇰', avatar: 'LE', color: '#7B68EE', groups: 1, joined: 'Jan 2024' },
-  { id: '5', name: 'Jordan Park', role: 'Member', location: 'Seoul, KR', flag: '🇰🇷', avatar: 'JP', color: '#E85592', groups: 1, joined: 'Mar 2024' },
-  { id: '6', name: 'Priya Nair', role: 'Organizer', location: 'Mumbai, IN', flag: '🇮🇳', avatar: 'PN', color: '#E88338', groups: 2, joined: 'Feb 2024' },
-  { id: '7', name: 'Tala Faleolo', role: 'Member', location: 'Suva, FJ', flag: '🇫🇯', avatar: 'TF', color: '#4CAF7D', groups: 1, joined: 'Apr 2024' },
-  { id: '8', name: 'Fatima Al-Rashid', role: 'Organizer', location: 'Amman, JO', flag: '🇯🇴', avatar: 'FA', color: '#E8A838', groups: 1, joined: 'Jun 2024' },
-  { id: '9', name: 'Carlos Mendez', role: 'Member', location: 'São Paulo, BR', flag: '🇧🇷', avatar: 'CM', color: '#38B2E8', groups: 2, joined: 'May 2024' },
-  { id: '10', name: 'Sarah Mills', role: 'Teacher', location: 'Omaha, US', flag: '🇺🇸', avatar: 'SM', color: '#7B68EE', groups: 3, joined: 'Sep 2023' },
-  { id: '11', name: 'Kenji Nakamura', role: 'Member', location: 'Tokyo, JP', flag: '🇯🇵', avatar: 'KN', color: '#E85592', groups: 1, joined: 'Jul 2024' },
-  { id: '12', name: 'Amara Osei', role: 'Organizer', location: 'Accra, GH', flag: '🇬🇭', avatar: 'AO', color: '#E88338', groups: 1, joined: 'Aug 2024' },
-];
+export interface Member {
+  id: string
+  name: string
+  avatar: string
+  role: string
+  location: string
+  country: string
+  countryFlag: string
+  joinDate: string
+  bio: string
+  groups: string[]
+}
 
-export const activities = [
-  { id: '1', member: members[0], action: 'started a discussion', target: '"What does democracy look like in 2025?"', group: groups[0], time: '2h ago', type: 'discussion' },
-  { id: '2', member: members[1], action: 'shared a route', target: '"Historic Lviv Walking Tour"', group: groups[0], time: '3h ago', type: 'route' },
-  { id: '3', member: members[2], action: 'uploaded a document', target: '"Nairobi Climate Data 2024"', group: groups[1], time: '5h ago', type: 'document' },
-  { id: '4', member: members[3], action: 'joined the group', target: '', group: groups[1], time: '6h ago', type: 'join' },
-  { id: '5', member: members[4], action: 'started a discussion', target: '"Mapping civic tech gaps in our city"', group: groups[2], time: '1d ago', type: 'discussion' },
-  { id: '6', member: members[6], action: 'uploaded a document', target: '"Coastal erosion photo essay"', group: groups[3], time: '1d ago', type: 'document' },
-  { id: '7', member: members[7], action: 'shared a route', target: '"Art spaces in Amman"', group: groups[4], time: '2d ago', type: 'route' },
-  { id: '8', member: members[8], action: 'started a discussion', target: '"Favela infrastructure project update"', group: groups[5], time: '2d ago', type: 'discussion' },
-];
+export interface ActivityItem {
+  id: string
+  memberId: string
+  memberName: string
+  memberAvatar: string
+  action: string
+  target: string
+  groupId: string
+  groupName: string
+  timestamp: string
+  type: 'posted' | 'shared' | 'uploaded' | 'joined' | 'commented'
+}
 
-export const discussions = [
-  { id: '1', title: 'What does democracy look like in 2025?', author: members[0], replies: 14, members: 8, lastActivity: '2h ago', tags: ['democracy', 'policy'], pinned: true },
-  { id: '2', title: 'Mapping our neighborhoods — first results', author: members[1], replies: 7, members: 5, lastActivity: '4h ago', tags: ['maps', 'data'], pinned: false },
-  { id: '3', title: 'Cross-border youth summit — who wants to join?', author: members[9], replies: 23, members: 12, lastActivity: '1d ago', tags: ['events', 'summit'], pinned: false },
-  { id: '4', title: 'Resource: How to present to city council', author: members[9], replies: 5, members: 4, lastActivity: '2d ago', tags: ['resources', 'civic'], pinned: false },
-  { id: '5', title: 'Introducing myself — from Lviv', author: members[1], replies: 18, members: 9, lastActivity: '3d ago', tags: ['introductions'], pinned: false },
-  { id: '6', title: 'Live discussion recap — April session', author: members[0], replies: 4, members: 6, lastActivity: '5d ago', tags: ['recap'], pinned: false },
-];
+export interface DiscussionThread {
+  id: string
+  title: string
+  authorId: string
+  authorName: string
+  authorAvatar: string
+  groupId: string
+  replyCount: number
+  viewCount: number
+  timestamp: string
+  tags: string[]
+}
 
-export const events = [
-  { id: '1', title: 'Virtual Summit: Youth & Climate Policy', group: groups[1], date: 'Jun 18', time: '3:00 PM UTC', attendees: 34 },
-  { id: '2', title: 'Map Workshop: Plotting Your Neighborhood', group: groups[5], date: 'Jun 20', time: '5:00 PM UTC', attendees: 18 },
-  { id: '3', title: 'Lviv–Omaha Live Exchange Session', group: groups[0], date: 'Jun 25', time: '2:00 PM UTC', attendees: 41 },
-  { id: '4', title: 'Civic Tech Demo Day', group: groups[2], date: 'Jul 3', time: '4:00 PM UTC', attendees: 27 },
-];
+export interface Event {
+  id: string
+  title: string
+  description: string
+  date: string
+  time: string
+  groupId: string
+  groupName: string
+  attendeeCount: number
+  type: 'workshop' | 'meeting' | 'action' | 'showcase'
+}
 
-export const routes = [
-  { id: '1', title: 'Historic Lviv Walking Tour', author: members[1], distance: '4.2 km', group: groups[0] },
-  { id: '2', title: 'Nairobi Green Spaces Map', author: members[2], distance: '12.8 km', group: groups[1] },
-  { id: '3', title: 'Omaha Civic Sites', author: members[0], distance: '6.1 km', group: groups[0] },
-  { id: '4', title: 'São Paulo Favela Infrastructure', author: members[8], distance: '3.4 km', group: groups[5] },
-  { id: '5', title: 'Copenhagen Climate Tour', author: members[3], distance: '8.7 km', group: groups[1] },
-  { id: '6', title: 'Art Spaces in Amman', author: members[7], distance: '5.2 km', group: groups[4] },
-];
+export interface MapRoute {
+  id: string
+  title: string
+  from: string
+  to: string
+  groupId: string
+  description: string
+  createdBy: string
+  timestamp: string
+}
+
+export const groups: Group[] = [
+  { id: '1', name: 'Climate Futures: Nairobi–Copenhagen', description: 'Youth climate advocates from East Africa and Scandinavia co-designing solutions for a sustainable future.', memberCount: 47, location: 'Nairobi, Kenya · Copenhagen, Denmark', gradient: 'linear-gradient(135deg, #1a3a2a 0%, #0d2018 50%, #1a2a1a 100%)', borderColor: '#4CAF7D', tags: ['Climate', 'Environment', 'Cross-cultural'], lastActive: '2 hours ago', organizer: 'Amara Osei', featured: true },
+  { id: '2', name: 'Youth Parliament: Lviv–Omaha', description: 'Students from Ukraine and Nebraska exploring democratic processes and civic engagement through simulation.', memberCount: 34, location: 'Lviv, Ukraine · Omaha, Nebraska', gradient: 'linear-gradient(135deg, #1a1a3a 0%, #0d0d28 50%, #1a1a3a 100%)', borderColor: '#5B8DEF', tags: ['Civics', 'Democracy', 'Exchange'], lastActive: '5 hours ago', organizer: 'Sofiya Petrenko', featured: true },
+  { id: '3', name: 'Civic Tech Fellows', description: 'Building digital tools for community organizing and participatory governance.', memberCount: 28, location: 'Global · Remote', gradient: 'linear-gradient(135deg, #2a1a3a 0%, #180d28 50%, #2a1a3a 100%)', borderColor: '#9B59B6', tags: ['Technology', 'Civic Tech', 'Design'], lastActive: '1 day ago', organizer: 'Marcus Chen', featured: false },
+  { id: '4', name: 'Ocean Stories', description: 'Coastal youth documenting marine ecosystems and advocating for ocean protection.', memberCount: 52, location: 'Pacific Rim · Atlantic', gradient: 'linear-gradient(135deg, #0d1a3a 0%, #060d28 50%, #0d1a3a 100%)', borderColor: '#2196F3', tags: ['Ocean', 'Environment', 'Storytelling'], lastActive: '3 hours ago', organizer: 'Leilani Kahale', featured: true },
+  { id: '5', name: 'Future Cities Lab', description: 'Urban planning and design students reimagining cities for the next generation.', memberCount: 39, location: 'São Paulo · Seoul · Lagos', gradient: 'linear-gradient(135deg, #3a2a1a 0%, #281a0d 50%, #3a2a1a 100%)', borderColor: '#E8A838', tags: ['Urban', 'Design', 'Planning'], lastActive: '12 hours ago', organizer: 'Pedro Alves', featured: false },
+  { id: '6', name: 'Arts Without Borders', description: 'Youth artists collaborating across cultures through visual art, music, and performance.', memberCount: 61, location: 'Global', gradient: 'linear-gradient(135deg, #3a1a1a 0%, #280d0d 50%, #3a1a1a 100%)', borderColor: '#E85555', tags: ['Arts', 'Culture', 'Performance'], lastActive: '30 minutes ago', organizer: 'Yuki Tanaka', featured: true },
+]
+
+export const members: Member[] = [
+  { id: '1', name: 'Amara Osei', avatar: 'AO', role: 'Organizer', location: 'Nairobi, Kenya', country: 'Kenya', countryFlag: '🇰🇪', joinDate: 'January 2024', bio: 'Environmental activist and youth leader working on climate solutions in East Africa.', groups: ['1', '4'] },
+  { id: '2', name: 'Sofiya Petrenko', avatar: 'SP', role: 'Organizer', location: 'Lviv, Ukraine', country: 'Ukraine', countryFlag: '🇺🇦', joinDate: 'February 2024', bio: 'Student of political science passionate about democratic participation and civic education.', groups: ['2'] },
+  { id: '3', name: 'Marcus Chen', avatar: 'MC', role: 'Organizer', location: 'San Francisco, USA', country: 'USA', countryFlag: '🇺🇸', joinDate: 'November 2023', bio: 'Software developer and civic technologist building tools for community organizing.', groups: ['3', '5'] },
+  { id: '4', name: 'Leilani Kahale', avatar: 'LK', role: 'Organizer', location: 'Honolulu, Hawaii', country: 'USA', countryFlag: '🇺🇸', joinDate: 'March 2024', bio: 'Marine biologist and storyteller documenting Pacific Ocean ecosystems.', groups: ['4'] },
+  { id: '5', name: 'Pedro Alves', avatar: 'PA', role: 'Organizer', location: 'São Paulo, Brazil', country: 'Brazil', countryFlag: '🇧🇷', joinDate: 'December 2023', bio: 'Urban designer and architect working on sustainable city planning.', groups: ['5'] },
+  { id: '6', name: 'Yuki Tanaka', avatar: 'YT', role: 'Organizer', location: 'Tokyo, Japan', country: 'Japan', countryFlag: '🇯🇵', joinDate: 'October 2023', bio: 'Multimedia artist and cultural exchange advocate.', groups: ['6'] },
+  { id: '7', name: 'Fatima Al-Hassan', avatar: 'FA', role: 'Member', location: 'Cairo, Egypt', country: 'Egypt', countryFlag: '🇪🇬', joinDate: 'April 2024', bio: 'Youth activist working on education access and gender equality.', groups: ['2', '6'] },
+  { id: '8', name: 'Kieran Murphy', avatar: 'KM', role: 'Member', location: 'Dublin, Ireland', country: 'Ireland', countryFlag: '🇮🇪', joinDate: 'January 2024', bio: 'Environmental science student focused on renewable energy transitions.', groups: ['1', '3'] },
+  { id: '9', name: 'Priya Sharma', avatar: 'PS', role: 'Member', location: 'Mumbai, India', country: 'India', countryFlag: '🇮🇳', joinDate: 'March 2024', bio: 'Tech entrepreneur building civic engagement platforms.', groups: ['3', '5'] },
+  { id: '10', name: 'Kofi Mensah', avatar: 'KM', role: 'Moderator', location: 'Accra, Ghana', country: 'Ghana', countryFlag: '🇬🇭', joinDate: 'February 2024', bio: 'Community organizer and youth parliament delegate.', groups: ['2', '1'] },
+  { id: '11', name: 'Isabella Rossi', avatar: 'IR', role: 'Member', location: 'Milan, Italy', country: 'Italy', countryFlag: '🇮🇹', joinDate: 'May 2024', bio: 'Fashion and art student exploring cultural exchange through creative work.', groups: ['6'] },
+  { id: '12', name: 'Jin-ho Park', avatar: 'JP', role: 'Member', location: 'Seoul, South Korea', country: 'South Korea', countryFlag: '🇰🇷', joinDate: 'January 2024', bio: 'Urban planning student and smart city enthusiast.', groups: ['5'] },
+]
+
+export const activities: ActivityItem[] = [
+  { id: '1', memberId: '1', memberName: 'Amara Osei', memberAvatar: 'AO', action: 'posted a new discussion', target: 'Carbon budgets and youth accountability', groupId: '1', groupName: 'Climate Futures', timestamp: '2 hours ago', type: 'posted' },
+  { id: '2', memberId: '6', memberName: 'Yuki Tanaka', memberAvatar: 'YT', action: 'uploaded artwork', target: 'Migration Series – Panel 3', groupId: '6', groupName: 'Arts Without Borders', timestamp: '3 hours ago', type: 'uploaded' },
+  { id: '3', memberId: '4', memberName: 'Leilani Kahale', memberAvatar: 'LK', action: 'shared a map route', target: 'Pacific Plastic Gyre Awareness Trail', groupId: '4', groupName: 'Ocean Stories', timestamp: '5 hours ago', type: 'shared' },
+  { id: '4', memberId: '7', memberName: 'Fatima Al-Hassan', memberAvatar: 'FA', action: 'joined the group', target: '', groupId: '2', groupName: 'Youth Parliament', timestamp: '6 hours ago', type: 'joined' },
+  { id: '5', memberId: '3', memberName: 'Marcus Chen', memberAvatar: 'MC', action: 'posted a new discussion', target: 'Open-source tools for participatory budgeting', groupId: '3', groupName: 'Civic Tech Fellows', timestamp: '8 hours ago', type: 'posted' },
+  { id: '6', memberId: '8', memberName: 'Kieran Murphy', memberAvatar: 'KM', action: 'commented on', target: 'Wind energy transition in coastal communities', groupId: '1', groupName: 'Climate Futures', timestamp: '10 hours ago', type: 'commented' },
+  { id: '7', memberId: '2', memberName: 'Sofiya Petrenko', memberAvatar: 'SP', action: 'uploaded a document', target: 'Youth Parliament Session Notes – May', groupId: '2', groupName: 'Youth Parliament', timestamp: '1 day ago', type: 'uploaded' },
+  { id: '8', memberId: '9', memberName: 'Priya Sharma', memberAvatar: 'PS', action: 'shared a resource', target: 'Civic tech toolkit for local elections', groupId: '3', groupName: 'Civic Tech Fellows', timestamp: '1 day ago', type: 'shared' },
+  { id: '9', memberId: '5', memberName: 'Pedro Alves', memberAvatar: 'PA', action: 'posted a new discussion', target: 'Green corridors in high-density cities', groupId: '5', groupName: 'Future Cities Lab', timestamp: '1 day ago', type: 'posted' },
+  { id: '10', memberId: '10', memberName: 'Kofi Mensah', memberAvatar: 'KM', action: 'joined the group', target: '', groupId: '1', groupName: 'Climate Futures', timestamp: '2 days ago', type: 'joined' },
+  { id: '11', memberId: '11', memberName: 'Isabella Rossi', memberAvatar: 'IR', action: 'uploaded artwork', target: 'Cross-cultural textile collaboration', groupId: '6', groupName: 'Arts Without Borders', timestamp: '2 days ago', type: 'uploaded' },
+  { id: '12', memberId: '12', memberName: 'Jin-ho Park', memberAvatar: 'JP', action: 'posted a new discussion', target: 'Smart city data and privacy rights', groupId: '5', groupName: 'Future Cities Lab', timestamp: '2 days ago', type: 'posted' },
+]
+
+export const discussions: DiscussionThread[] = [
+  { id: '1', title: 'Carbon budgets and youth accountability', authorId: '1', authorName: 'Amara Osei', authorAvatar: 'AO', groupId: '1', replyCount: 12, viewCount: 87, timestamp: '2 hours ago', tags: ['Climate', 'Policy'] },
+  { id: '2', title: 'How do we make climate data accessible to all?', authorId: '8', authorName: 'Kieran Murphy', authorAvatar: 'KM', groupId: '1', replyCount: 8, viewCount: 54, timestamp: '1 day ago', tags: ['Data', 'Accessibility'] },
+  { id: '3', title: 'Youth Parliament simulation – feedback thread', authorId: '2', authorName: 'Sofiya Petrenko', authorAvatar: 'SP', groupId: '2', replyCount: 23, viewCount: 134, timestamp: '5 hours ago', tags: ['Parliament', 'Feedback'] },
+  { id: '4', title: 'Open-source tools for participatory budgeting', authorId: '3', authorName: 'Marcus Chen', authorAvatar: 'MC', groupId: '3', replyCount: 15, viewCount: 92, timestamp: '8 hours ago', tags: ['Tech', 'Budgeting'] },
+  { id: '5', title: 'Green corridors in high-density cities', authorId: '5', authorName: 'Pedro Alves', authorAvatar: 'PA', groupId: '5', replyCount: 7, viewCount: 41, timestamp: '1 day ago', tags: ['Urban', 'Green'] },
+  { id: '6', title: 'Documenting coral bleaching through art', authorId: '4', authorName: 'Leilani Kahale', authorAvatar: 'LK', groupId: '4', replyCount: 19, viewCount: 108, timestamp: '3 hours ago', tags: ['Ocean', 'Art'] },
+  { id: '7', title: 'Cross-cultural collaboration challenges', authorId: '7', authorName: 'Fatima Al-Hassan', authorAvatar: 'FA', groupId: '6', replyCount: 31, viewCount: 201, timestamp: '12 hours ago', tags: ['Culture', 'Collaboration'] },
+  { id: '8', title: 'Smart city data and privacy rights', authorId: '12', authorName: 'Jin-ho Park', authorAvatar: 'JP', groupId: '5', replyCount: 11, viewCount: 67, timestamp: '2 days ago', tags: ['Privacy', 'Tech'] },
+]
+
+export const events: Event[] = [
+  { id: '1', title: 'Climate Action Workshop', description: 'Co-design session for youth-led climate pledges', date: '2026-06-14', time: '15:00 UTC', groupId: '1', groupName: 'Climate Futures', attendeeCount: 28, type: 'workshop' },
+  { id: '2', title: 'Youth Parliament Simulation', description: 'Live debate on digital rights legislation', date: '2026-06-17', time: '14:00 UTC', groupId: '2', groupName: 'Youth Parliament', attendeeCount: 34, type: 'action' },
+  { id: '3', title: 'Civic Tech Demo Day', description: 'Teams present their community tools', date: '2026-06-20', time: '18:00 UTC', groupId: '3', groupName: 'Civic Tech Fellows', attendeeCount: 52, type: 'showcase' },
+  { id: '4', title: 'Ocean Stories Showcase', description: 'Multimedia exhibition of marine ecosystem documentation', date: '2026-06-25', time: '16:00 UTC', groupId: '4', groupName: 'Ocean Stories', attendeeCount: 67, type: 'showcase' },
+]
+
+export const mapRoutes: MapRoute[] = [
+  { id: '1', title: 'Nairobi to Copenhagen Climate Exchange', from: 'Nairobi, Kenya', to: 'Copenhagen, Denmark', groupId: '1', description: 'Tracing the journey of climate data between two youth organizations', createdBy: 'Amara Osei', timestamp: '1 week ago' },
+  { id: '2', title: 'Pacific Plastic Gyre Awareness Trail', from: 'Honolulu, Hawaii', to: 'Manila, Philippines', groupId: '4', description: 'Documenting ocean plastic pollution hotspots', createdBy: 'Leilani Kahale', timestamp: '3 days ago' },
+  { id: '3', title: 'Lviv to Omaha Democracy Bridge', from: 'Lviv, Ukraine', to: 'Omaha, Nebraska', groupId: '2', description: 'Cultural exchange route between partner schools', createdBy: 'Sofiya Petrenko', timestamp: '2 weeks ago' },
+  { id: '4', title: 'Future Cities Network', from: 'São Paulo, Brazil', to: 'Seoul, South Korea', groupId: '5', description: 'Urban innovation exchange between megacities', createdBy: 'Pedro Alves', timestamp: '5 days ago' },
+  { id: '5', title: 'Arts Without Borders Tour', from: 'Tokyo, Japan', to: 'Milan, Italy', groupId: '6', description: 'Cultural art exchange route highlighting partner institutions', createdBy: 'Yuki Tanaka', timestamp: '1 week ago' },
+  { id: '6', title: 'West African Climate Corridor', from: 'Accra, Ghana', to: 'Lagos, Nigeria', groupId: '1', description: 'Regional climate vulnerability mapping', createdBy: 'Kofi Mensah', timestamp: '4 days ago' },
+]

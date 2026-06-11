@@ -1,96 +1,154 @@
 'use client';
+
 import { motion } from 'framer-motion';
+import { Bell, MessageSquare, Search, ChevronRight, Video, BookOpen, AlertCircle, Users } from 'lucide-react';
 import Link from 'next/link';
-import TopNav from '@/components/TopNav';
+import CompassMark from '@/components/CompassMark';
 import GroupCard from '@/components/GroupCard';
 import ActivityItem from '@/components/ActivityItem';
 import Avatar from '@/components/ui/Avatar';
-import { groups, members, activities, events } from '@/lib/mockData';
-import { Calendar, ChevronRight, Globe, Users, MessageSquare } from 'lucide-react';
+import { groups, activities, events, members } from '@/lib/mockData';
 
 const currentUser = members[0];
 
+function EventIcon({ type }: { type: string }) {
+  if (type === 'video-call') return <Video size={14} style={{ color: '#38BDF8' }} />;
+  if (type === 'workshop') return <BookOpen size={14} style={{ color: '#A78BFA' }} />;
+  if (type === 'deadline') return <AlertCircle size={14} style={{ color: '#E85555' }} />;
+  return <Users size={14} style={{ color: '#4CAF7D' }} />;
+}
+
 export default function Dashboard() {
-  const myGroups = groups.slice(0, 3);
-  const discoverGroups = groups.slice(3, 5);
+  const myGroups = groups.filter((g) => g.featured);
+  const discoverGroups = groups.filter((g) => !g.featured);
 
   return (
-    <div className="min-h-screen" style={{ background: '#0D0D0D' }}>
-      <TopNav />
+    <div className="min-h-screen" style={{ backgroundColor: '#0D0D0D' }}>
+      {/* Nav */}
+      <nav className="sticky top-0 z-50 backdrop-blur-md" style={{ backgroundColor: 'rgba(13,13,13,0.8)', borderBottom: '1px solid #2A2A2A' }}>
+        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
+            <CompassMark size={28} />
+            <span className="hidden sm:block text-lg" style={{ fontFamily: 'var(--font-instrument-serif), Georgia, serif', color: '#F0EDE8' }}>Narrative Atlas</span>
+          </Link>
 
-      {/* Hero */}
-      <div className="pt-14">
-        <div className="aurora-bg px-6 py-12 md:py-16 relative overflow-hidden">
-          <div className="max-w-6xl mx-auto relative z-10">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <div className="flex items-center gap-3 mb-3">
-                <Avatar initials={currentUser.avatar} color={currentUser.color} size={40} online />
-                <div>
-                  <p className="text-xs text-[#8A8580] uppercase tracking-wider">Good morning</p>
-                  <h1 className="font-display text-2xl text-[#F0EDE8]">{currentUser.name}</h1>
-                </div>
-              </div>
+          {/* Search */}
+          <div className="flex-1 max-w-md mx-auto">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2" size={15} style={{ color: '#8A8580' }} />
+              <input
+                type="search"
+                placeholder="Search groups, members, documents..."
+                className="w-full rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none transition-colors"
+                style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A', color: '#F0EDE8' }}
+              />
+            </div>
+          </div>
 
-              <div className="flex flex-wrap gap-4 mt-6">
-                {[
-                  { icon: <Users size={14} />, label: '3 active groups' },
-                  { icon: <MessageSquare size={14} />, label: '2 unread messages' },
-                  { icon: <Calendar size={14} />, label: '1 upcoming event' },
-                  { icon: <Globe size={14} />, label: `${currentUser.flag} ${currentUser.location}` },
-                ].map((stat, i) => (
-                  <div key={i} className="flex items-center gap-2 text-sm text-[#8A8580]">
-                    <span style={{ color: '#E8A838' }}>{stat.icon}</span>
-                    {stat.label}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+          {/* Right icons */}
+          <div className="flex items-center gap-2 shrink-0">
+            <button className="relative p-2 rounded-lg transition-colors" style={{ color: '#8A8580' }}>
+              <Bell size={18} />
+              <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#E8A838' }} />
+            </button>
+            <button className="p-2 rounded-lg transition-colors" style={{ color: '#8A8580' }}>
+              <MessageSquare size={18} />
+            </button>
+            <Avatar initials={currentUser.avatar} size="sm" online />
           </div>
         </div>
-      </div>
+      </nav>
 
-      <div className="max-w-6xl mx-auto px-6 py-8">
+      <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main content */}
-          <div className="lg:col-span-2 space-y-10">
+          <div className="lg:col-span-2 space-y-8">
+            {/* Hero */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative rounded-2xl overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, #1a2a1a 0%, #1a1a2a 50%, #2a1a1a 100%)',
+                border: '1px solid #2A2A2A',
+              }}
+            >
+              <div
+                className="absolute inset-0 opacity-30"
+                style={{
+                  backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(232,168,56,0.12) 0%, transparent 60%), radial-gradient(circle at 70% 50%, rgba(76,175,125,0.06) 0%, transparent 60%)',
+                }}
+              />
+              <div className="relative z-10 p-8">
+                <p className="text-sm mb-1" style={{ color: '#8A8580' }}>Good morning,</p>
+                <h1 style={{ fontFamily: 'var(--font-instrument-serif), Georgia, serif', fontSize: '2.5rem', color: '#F0EDE8' }}>{currentUser.name.split(' ')[0]}.</h1>
+                <p className="mt-2 text-sm" style={{ color: '#8A8580' }}>
+                  You have{' '}
+                  <span className="font-medium" style={{ color: '#E8A838' }}>3 new messages</span> and{' '}
+                  <span className="font-medium" style={{ color: '#E8A838' }}>1 upcoming event</span> today.
+                </p>
+              </div>
+            </motion.div>
 
             {/* My Groups */}
             <section>
               <div className="flex items-center justify-between mb-4">
-                <h2 className="font-display text-xl text-[#F0EDE8]">My Groups</h2>
-                <Link href="/groups" className="flex items-center gap-1 text-sm text-[#E8A838] hover:text-[#F0B84A] transition-colors">
+                <h2 className="text-lg font-medium" style={{ color: '#F0EDE8' }}>My Groups</h2>
+                <Link href="/groups" className="text-sm flex items-center gap-1 transition-colors" style={{ color: '#E8A838' }}>
                   View all <ChevronRight size={14} />
                 </Link>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="flex gap-4 overflow-x-auto pb-2 no-scrollbar">
                 {myGroups.map((group, i) => (
-                  <GroupCard key={group.id} group={group} index={i} />
+                  <motion.div
+                    key={group.id}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className="shrink-0 w-64"
+                  >
+                    <GroupCard group={group} compact />
+                  </motion.div>
                 ))}
               </div>
             </section>
 
             {/* Activity Feed */}
             <section>
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="font-display text-xl text-[#F0EDE8]">What&apos;s happening</h2>
-              </div>
-              <div className="rounded-xl border border-[#2A2A2A] bg-[#161616] overflow-hidden">
-                {activities.map(activity => (
+              <h2 className="text-lg font-medium mb-4" style={{ color: '#F0EDE8' }}>Global Activity</h2>
+              <div className="rounded-xl" style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A' }}>
+                {activities.slice(0, 10).map((activity) => (
                   <div key={activity.id} className="px-4">
                     <ActivityItem activity={activity} />
                   </div>
                 ))}
+                <div className="px-4 py-3">
+                  <button className="text-sm flex items-center gap-1 transition-colors" style={{ color: '#E8A838' }}>
+                    Load more activity <ChevronRight size={14} />
+                  </button>
+                </div>
               </div>
             </section>
 
             {/* Discover */}
             <section>
               <div className="flex items-center justify-between mb-4">
-                <h2 className="font-display text-xl text-[#F0EDE8]">Discover communities</h2>
+                <h2 className="text-lg font-medium" style={{ color: '#F0EDE8' }}>Discover Groups</h2>
+                <Link href="/groups" className="text-sm flex items-center gap-1 transition-colors" style={{ color: '#E8A838' }}>
+                  Browse all <ChevronRight size={14} />
+                </Link>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {discoverGroups.map((group, i) => (
-                  <GroupCard key={group.id} group={group} index={i} />
+                  <motion.div
+                    key={group.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                  >
+                    <GroupCard group={group} />
+                  </motion.div>
                 ))}
               </div>
             </section>
@@ -99,53 +157,48 @@ export default function Dashboard() {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Upcoming Events */}
-            <section>
-              <h2 className="font-display text-xl text-[#F0EDE8] mb-4">Upcoming Events</h2>
+            <div className="rounded-xl p-5" style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A' }}>
+              <h3 className="font-medium mb-4" style={{ color: '#F0EDE8' }}>Upcoming Events</h3>
               <div className="space-y-3">
-                {events.map((event, i) => (
+                {events.map((event) => (
                   <motion.div
                     key={event.id}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="p-4 rounded-xl border border-[#2A2A2A] bg-[#161616] hover:border-[#E8A838]/40 transition-colors cursor-pointer"
+                    whileHover={{ x: 2 }}
+                    className="flex gap-3 p-3 rounded-lg transition-colors cursor-pointer"
                   >
-                    <div className="flex items-start gap-3">
-                      <div className="text-center shrink-0 w-10">
-                        <div className="text-xs text-[#E8A838] font-medium uppercase">{event.date.split(' ')[0]}</div>
-                        <div className="text-lg font-bold text-[#F0EDE8] leading-none">{event.date.split(' ')[1]}</div>
-                      </div>
-                      <div className="min-w-0">
-                        <p className="text-sm font-medium text-[#F0EDE8] leading-snug">{event.title}</p>
-                        <p className="text-xs text-[#8A8580] mt-1">{event.time}</p>
-                        <p className="text-xs text-[#4A4845] mt-1">{event.group.icon} {event.group.name}</p>
-                      </div>
+                    <div className="mt-0.5">
+                      <EventIcon type={event.type} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm leading-snug line-clamp-2" style={{ color: '#F0EDE8' }}>{event.title}</p>
+                      <p className="text-xs mt-1" style={{ color: '#8A8580' }}>{event.date}</p>
+                      <p className="text-xs mt-0.5" style={{ color: '#E8A838' }}>{event.time}</p>
                     </div>
                   </motion.div>
                 ))}
               </div>
-            </section>
+            </div>
 
-            {/* Stats */}
-            <section className="p-5 rounded-xl border border-[#2A2A2A] bg-[#161616]">
-              <h3 className="text-sm font-medium text-[#8A8580] uppercase tracking-wider mb-4">Platform</h3>
+            {/* Members online */}
+            <div className="rounded-xl p-5" style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A' }}>
+              <h3 className="font-medium mb-4" style={{ color: '#F0EDE8' }}>Members Online</h3>
               <div className="space-y-3">
-                {[
-                  { label: 'Countries represented', value: '24' },
-                  { label: 'Active members', value: '281' },
-                  { label: 'Discussions this month', value: '47' },
-                  { label: 'Routes mapped', value: '138' },
-                ].map(stat => (
-                  <div key={stat.label} className="flex justify-between items-center">
-                    <span className="text-sm text-[#8A8580]">{stat.label}</span>
-                    <span className="text-sm font-semibold text-[#E8A838]">{stat.value}</span>
-                  </div>
+                {members.slice(0, 5).map((member) => (
+                  <Link key={member.id} href={`/members/${member.id}`}>
+                    <div className="flex items-center gap-3 py-1 transition-opacity hover:opacity-80">
+                      <Avatar initials={member.avatar} size="sm" online />
+                      <div className="min-w-0">
+                        <p className="text-sm truncate" style={{ color: '#F0EDE8' }}>{member.name}</p>
+                        <p className="text-xs truncate" style={{ color: '#8A8580' }}>{member.location}</p>
+                      </div>
+                    </div>
+                  </Link>
                 ))}
               </div>
-            </section>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

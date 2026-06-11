@@ -1,45 +1,47 @@
-'use client';
-import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+'use client'
 
-interface ButtonProps {
-  children: ReactNode;
-  variant?: 'primary' | 'ghost' | 'danger' | 'subtle';
-  size?: 'sm' | 'md' | 'lg';
-  onClick?: () => void;
-  disabled?: boolean;
-  fullWidth?: boolean;
-  type?: 'button' | 'submit';
-  className?: string;
+import { ButtonHTMLAttributes, ReactNode } from 'react'
+import { motion } from 'framer-motion'
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'ghost' | 'danger'
+  size?: 'sm' | 'md' | 'lg'
+  children: ReactNode
+  fullWidth?: boolean
 }
 
 export default function Button({
-  children, variant = 'primary', size = 'md', onClick, disabled, fullWidth, type = 'button', className = ''
+  variant = 'primary',
+  size = 'md',
+  children,
+  fullWidth = false,
+  className = '',
+  ...props
 }: ButtonProps) {
-  const base = 'inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-all duration-200 cursor-pointer border-0 select-none';
-
+  const base = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background disabled:opacity-50 disabled:cursor-not-allowed'
+  
   const variants = {
-    primary: 'bg-[#E8A838] text-[#0D0D0D] hover:bg-[#F0B84A] active:scale-[0.98]',
-    ghost: 'bg-transparent text-[#F0EDE8] border border-[#2A2A2A] hover:border-[#E8A838] hover:text-[#E8A838] active:scale-[0.98]',
-    danger: 'bg-[#E85555] text-white hover:bg-[#f06666] active:scale-[0.98]',
-    subtle: 'bg-[#1E1E1E] text-[#8A8580] hover:bg-[#2A2A2A] hover:text-[#F0EDE8] active:scale-[0.98]',
-  };
-
+    primary: 'bg-accent hover:bg-accent-hover text-background focus:ring-accent',
+    ghost: 'border border-border hover:border-text-secondary text-text-primary hover:bg-surface-elevated focus:ring-border',
+    danger: 'bg-danger hover:bg-red-600 text-white focus:ring-danger',
+  }
+  
   const sizes = {
-    sm: 'px-3 py-1.5 text-xs',
-    md: 'px-4 py-2 text-sm',
-    lg: 'px-6 py-3 text-base',
-  };
+    sm: 'px-3 py-1.5 text-sm gap-1.5',
+    md: 'px-4 py-2 text-sm gap-2',
+    lg: 'px-6 py-3 text-base gap-2',
+  }
 
   return (
     <motion.button
-      whileTap={{ scale: 0.97 }}
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={`${base} ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${disabled ? 'opacity-40 cursor-not-allowed' : ''} ${className}`}
+      whileHover={{ scale: 1.01 }}
+      whileTap={{ scale: 0.98 }}
+      className={`${base} ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
+      onClick={props.onClick}
+      disabled={props.disabled}
+      type={props.type}
     >
       {children}
     </motion.button>
-  );
+  )
 }

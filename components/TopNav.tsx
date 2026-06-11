@@ -20,7 +20,7 @@ export default function TopNav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-14 bg-[#0D0D0D]/90 backdrop-blur-md border-b border-[#1E1E1E] flex items-center px-6 gap-6">
       <Link href="/" className="flex items-center gap-2.5 shrink-0">
-        <CompassMark size={28} animated />
+        <CompassMark size={28} animate />
         <span className="font-display text-[#F0EDE8] text-base italic hidden sm:block">Narrative Atlas</span>
       </Link>
 
@@ -60,8 +60,8 @@ export default function TopNav() {
           <Bell size={18} />
           <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-[#E85555] rounded-full" />
         </button>
-        <Link href="/members/1">
-          <Avatar initials={currentUser.avatar} color={currentUser.color} size={30} online />
+        <Link href={`/members/${currentUser.id}`}>
+          <Avatar initials={currentUser.avatar} color="#E8A838" size={30} online />
         </Link>
       </div>
     </nav>

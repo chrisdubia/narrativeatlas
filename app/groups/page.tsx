@@ -1,84 +1,109 @@
 'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import TopNav from '@/components/TopNav';
-import GroupCard from '@/components/GroupCard';
-import { groups } from '@/lib/mockData';
-import { Search } from 'lucide-react';
 
-const filters = ['All', 'My Groups', 'Climate Action', 'Youth Exchange', 'Civic Tech', 'Arts & Culture'];
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { Search } from 'lucide-react';
+import Link from 'next/link';
+import CompassMark from '@/components/CompassMark';
+import GroupCard from '@/components/GroupCard';
+import Avatar from '@/components/ui/Avatar';
+import { groups, members } from '@/lib/mockData';
+
+const filters = ['All', 'My Groups', 'Featured', 'Recently Active'];
 
 export default function GroupsPage() {
   const [activeFilter, setActiveFilter] = useState('All');
-  const [query, setQuery] = useState('');
+  const [search, setSearch] = useState('');
 
-  const filtered = groups.filter(g => {
-    const matchesQuery = g.name.toLowerCase().includes(query.toLowerCase()) ||
-      g.description.toLowerCase().includes(query.toLowerCase());
-    const matchesFilter = activeFilter === 'All' || activeFilter === 'My Groups' ||
-      g.category === activeFilter;
-    return matchesQuery && matchesFilter;
+  const filtered = groups.filter((g) => {
+    const matchSearch = g.name.toLowerCase().includes(search.toLowerCase()) || g.description.toLowerCase().includes(search.toLowerCase());
+    if (!matchSearch) return false;
+    if (activeFilter === 'My Groups') return false; // no isMember in Group type
+    if (activeFilter === 'Featured') return g.featured;
+    if (activeFilter === 'Recently Active') return ['1 hour ago', '2 hours ago', '3 hours ago', '4 hours ago'].includes(g.lastActive);
+    return true;
   });
 
+  const currentUser = members[0];
+
   return (
-    <div className="min-h-screen" style={{ background: '#0D0D0D' }}>
-      <TopNav />
-      <div className="pt-14">
+    <div className="min-h-screen" style={{ backgroundColor: '#0D0D0D' }}>
+      {/* Nav */}
+      <nav className="sticky top-0 z-50 backdrop-blur-md" style={{ backgroundColor: 'rgba(13,13,13,0.8)', borderBottom: '1px solid #2A2A2A' }}>
+        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
+            <CompassMark size={28} />
+            <span className="hidden sm:block text-lg" style={{ fontFamily: 'var(--font-instrument-serif), Georgia, serif', color: '#F0EDE8' }}>Narrative Atlas</span>
+          </Link>
+          <div className="flex-1" />
+          <Avatar initials={currentUser.avatar} size="sm" />
+        </div>
+      </nav>
+
+      <main className="max-w-7xl mx-auto px-4 py-10">
         {/* Header */}
-        <div className="px-6 py-12 border-b border-[#1E1E1E]" style={{ background: '#111111' }}>
-          <div className="max-w-6xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
-              <p className="text-xs text-[#E8A838] uppercase tracking-widest mb-2 font-medium">Communities</p>
-              <h1 className="font-display text-5xl text-[#F0EDE8] mb-3">Find your people.<br />Join the mission.</h1>
-              <p className="text-[#8A8580] text-lg max-w-xl">
-                {groups.length} communities · {groups.reduce((a, g) => a + g.memberCount, 0)} members · 24 countries
-              </p>
-            </motion.div>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <h1 style={{ fontFamily: 'var(--font-instrument-serif), Georgia, serif', fontSize: '3rem', color: '#F0EDE8' }}>Communities</h1>
+          <p className="mt-2" style={{ color: '#8A8580' }}>Explore groups of young changemakers working across borders.</p>
+        </motion.div>
 
-        <div className="max-w-6xl mx-auto px-6 py-8">
-          {/* Filter bar */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <div className="flex items-center gap-2 overflow-x-auto pb-1 flex-1">
-              {filters.map(f => (
-                <button
-                  key={f}
-                  onClick={() => setActiveFilter(f)}
-                  className={`shrink-0 px-4 py-2 rounded-full text-sm transition-all border ${
-                    activeFilter === f
-                      ? 'bg-[#E8A838] text-[#0D0D0D] border-[#E8A838] font-medium'
-                      : 'border-[#2A2A2A] text-[#8A8580] hover:border-[#3A3A3A] hover:text-[#F0EDE8]'
-                  }`}
-                >
-                  {f}
-                </button>
-              ))}
-            </div>
-            <div className="flex items-center gap-2 bg-[#161616] border border-[#2A2A2A] rounded-lg px-3 py-2 w-full sm:w-64">
-              <Search size={14} className="text-[#4A4845] shrink-0" />
-              <input
-                value={query}
-                onChange={e => setQuery(e.target.value)}
-                placeholder="Search groups..."
-                className="bg-transparent text-sm text-[#F0EDE8] placeholder-[#3A3A3A] flex-1"
-              />
-            </div>
-          </div>
-
-          {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((group, i) => (
-              <GroupCard key={group.id} group={group} index={i} />
+        {/* Filter bar */}
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+          <div className="flex gap-1 rounded-lg p-1" style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A' }}>
+            {filters.map((f) => (
+              <button
+                key={f}
+                onClick={() => setActiveFilter(f)}
+                className="px-3 py-1.5 rounded-md text-sm font-medium transition-colors"
+                style={{
+                  backgroundColor: activeFilter === f ? '#1E1E1E' : 'transparent',
+                  color: activeFilter === f ? '#F0EDE8' : '#8A8580',
+                }}
+              >
+                {f}
+              </button>
             ))}
-            {filtered.length === 0 && (
-              <div className="col-span-3 text-center py-16 text-[#4A4845]">
-                No communities match your search.
-              </div>
-            )}
           </div>
+
+          <div className="relative flex-1 max-w-xs">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2" size={15} style={{ color: '#8A8580' }} />
+            <input
+              type="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search communities..."
+              className="w-full rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none transition-colors"
+              style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A', color: '#F0EDE8' }}
+            />
+          </div>
+
+          <p className="text-sm ml-auto" style={{ color: '#8A8580' }}>{filtered.length} communities</p>
         </div>
-      </div>
+
+        {/* Group grid */}
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filtered.map((group, i) => (
+            <motion.div
+              key={group.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.07 }}
+            >
+              <GroupCard group={group} />
+            </motion.div>
+          ))}
+        </div>
+
+        {filtered.length === 0 && (
+          <div className="text-center py-24">
+            <p style={{ color: '#8A8580' }}>No communities found.</p>
+          </div>
+        )}
+      </main>
     </div>
   );
 }

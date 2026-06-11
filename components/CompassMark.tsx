@@ -1,37 +1,54 @@
-'use client';
-import { motion } from 'framer-motion';
+'use client'
 
-export default function CompassMark({ size = 32, animated = false }: { size?: number; animated?: boolean }) {
+import { motion } from 'framer-motion'
+
+interface CompassMarkProps {
+  size?: number
+  animate?: boolean
+  className?: string
+}
+
+export default function CompassMark({ size = 48, animate = false, className = '' }: CompassMarkProps) {
   return (
     <motion.svg
       width={size}
       height={size}
-      viewBox="0 0 40 40"
+      viewBox="0 0 48 48"
       fill="none"
-      whileHover={animated ? { rotate: 15 } : undefined}
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      animate={animate ? { rotate: 360 } : {}}
+      transition={animate ? { duration: 30, repeat: Infinity, ease: 'linear' } : {}}
+      whileHover={{ rotate: 45 }}
     >
-      <circle cx="20" cy="20" r="18" stroke="#2A2A2A" strokeWidth="1.5" />
-      <circle cx="20" cy="20" r="14" stroke="#1E1E1E" strokeWidth="0.75" />
-      {/* North needle - amber */}
+      {/* Outer ring */}
+      <circle cx="24" cy="24" r="22" stroke="#2A2A2A" strokeWidth="1.5" />
+      <circle cx="24" cy="24" r="18" stroke="#2A2A2A" strokeWidth="0.5" />
+      
+      {/* Cardinal tick marks */}
+      <line x1="24" y1="2" x2="24" y2="7" stroke="#8A8580" strokeWidth="1.5" strokeLinecap="round" />
+      <line x1="46" y1="24" x2="41" y2="24" stroke="#8A8580" strokeWidth="1" strokeLinecap="round" />
+      <line x1="24" y1="46" x2="24" y2="41" stroke="#8A8580" strokeWidth="1" strokeLinecap="round" />
+      <line x1="2" y1="24" x2="7" y2="24" stroke="#8A8580" strokeWidth="1" strokeLinecap="round" />
+      
+      {/* North needle (amber) */}
       <motion.path
-        d="M20 20 L20 6"
-        stroke="#E8A838"
-        strokeWidth="2"
-        strokeLinecap="round"
-        animate={animated ? { rotate: [0, 360] } : undefined}
-        transition={animated ? { duration: 20, repeat: Infinity, ease: 'linear' } : undefined}
-        style={{ transformOrigin: '20px 20px' }}
+        d="M24 6 L26.5 24 L24 22 L21.5 24 Z"
+        fill="#E8A838"
+        whileHover={{ scale: 1.1 }}
       />
-      {/* South needle - muted */}
-      <path d="M20 20 L20 34" stroke="#4A4845" strokeWidth="1.5" strokeLinecap="round" />
-      {/* East/West ticks */}
-      <path d="M6 20 L8 20 M32 20 L34 20" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" />
+      {/* South needle (dark) */}
+      <path d="M24 42 L26.5 24 L24 26 L21.5 24 Z" fill="#3A3A3A" />
+      
       {/* Center dot */}
-      <circle cx="20" cy="20" r="2" fill="#E8A838" />
-      {/* Cardinal labels */}
-      <text x="20" y="4.5" textAnchor="middle" fill="#E8A838" fontSize="4" fontFamily="Inter" fontWeight="600">N</text>
-      <text x="20" y="38" textAnchor="middle" fill="#4A4845" fontSize="4" fontFamily="Inter" fontWeight="500">S</text>
+      <circle cx="24" cy="24" r="2.5" fill="#E8A838" />
+      <circle cx="24" cy="24" r="1" fill="#0D0D0D" />
+      
+      {/* Ordinal ticks */}
+      <line x1="39.6" y1="8.4" x2="36.4" y2="11.6" stroke="#2A2A2A" strokeWidth="0.75" strokeLinecap="round" />
+      <line x1="39.6" y1="39.6" x2="36.4" y2="36.4" stroke="#2A2A2A" strokeWidth="0.75" strokeLinecap="round" />
+      <line x1="8.4" y1="39.6" x2="11.6" y2="36.4" stroke="#2A2A2A" strokeWidth="0.75" strokeLinecap="round" />
+      <line x1="8.4" y1="8.4" x2="11.6" y2="11.6" stroke="#2A2A2A" strokeWidth="0.75" strokeLinecap="round" />
     </motion.svg>
-  );
+  )
 }

@@ -1,54 +1,72 @@
-'use client';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import TopNav from '@/components/TopNav';
-import Avatar from '@/components/ui/Avatar';
-import Badge from '@/components/ui/Badge';
-import { members } from '@/lib/mockData';
+'use client'
+
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Search } from 'lucide-react'
+import Link from 'next/link'
+import CompassMark from '@/components/CompassMark'
+import MemberCard from '@/components/MemberCard'
+import { members } from '@/lib/mockData'
 
 export default function MembersPage() {
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const filtered = members.filter(m =>
+    m.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    m.location.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+
   return (
-    <div className="min-h-screen" style={{ background: '#0D0D0D' }}>
-      <TopNav />
-      <div className="pt-14">
-        <div className="px-6 py-12 border-b border-[#1E1E1E]" style={{ background: '#111111' }}>
-          <div className="max-w-6xl mx-auto">
-            <p className="text-xs text-[#E8A838] uppercase tracking-widest mb-2 font-medium">Members</p>
-            <h1 className="font-display text-5xl text-[#F0EDE8]">The people making it happen.</h1>
-            <p className="text-[#8A8580] text-lg mt-3">{members.length} members · 24 countries</p>
-          </div>
+    <div className="min-h-screen bg-background">
+      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-2">
+            <CompassMark size={28} />
+            <span className="font-serif text-lg hidden sm:block">Narrative Atlas</span>
+          </Link>
         </div>
-        <div className="max-w-6xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {members.map((member, i) => (
-              <motion.div
-                key={member.id}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-                whileHover={{ y: -4 }}
-              >
-                <Link href={`/members/${member.id}`}>
-                  <div className="p-5 rounded-xl border border-[#2A2A2A] bg-[#161616] hover:border-[#E8A838]/40 transition-all cursor-pointer text-center">
-                    <div className="flex justify-center mb-3">
-                      <Avatar initials={member.avatar} color={member.color} size={52} online={i < 4} />
-                    </div>
-                    <p className="font-medium text-[#F0EDE8]">{member.name}</p>
-                    <p className="text-xs text-[#4A4845] mt-0.5">{member.flag} {member.location}</p>
-                    <div className="mt-2 flex justify-center">
-                      <Badge
-                        label={member.role}
-                        color={member.role === 'Organizer' ? '#E8A838' : member.role === 'Teacher' ? '#7B68EE' : '#8A8580'}
-                      />
-                    </div>
-                    <p className="text-xs text-[#4A4845] mt-2">{member.groups} group{member.groups !== 1 ? 's' : ''}</p>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+      </nav>
+
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-8"
+        >
+          <h1 className="font-serif text-4xl text-text-primary mb-2">Members</h1>
+          <p className="text-text-secondary">{members.length} changemakers from around the world.</p>
+        </motion.div>
+
+        <div className="relative mb-6 max-w-md">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-secondary" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search members…"
+            className="bg-surface border border-border rounded-lg pl-9 pr-4 py-2 text-sm text-text-primary placeholder-text-secondary focus:outline-none focus:border-accent transition-colors w-full"
+          />
         </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filtered.map((member, i) => (
+            <motion.div
+              key={member.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.05 }}
+            >
+              <MemberCard member={member} />
+            </motion.div>
+          ))}
+        </div>
+
+        {filtered.length === 0 && (
+          <div className="text-center py-16">
+            <p className="text-text-secondary">No members found.</p>
+          </div>
+        )}
       </div>
     </div>
-  );
+  )
 }
