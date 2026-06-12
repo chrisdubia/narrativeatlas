@@ -1,204 +1,120 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { Bell, MessageSquare, Search, ChevronRight, Video, BookOpen, AlertCircle, Users } from 'lucide-react';
-import Link from 'next/link';
-import CompassMark from '@/components/CompassMark';
-import GroupCard from '@/components/GroupCard';
-import ActivityItem from '@/components/ActivityItem';
-import Avatar from '@/components/ui/Avatar';
-import { groups, activities, events, members } from '@/lib/mockData';
+import { Search, Lock, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
+import CompassMark from '@/components/CompassMark'
+import GroupCard from '@/components/GroupCard'
+import Avatar from '@/components/ui/Avatar'
+import { groups, activities, events, members } from '@/lib/mockData'
 
-const currentUser = members[0];
+const currentUser = members[0]
 
-function EventIcon({ type }: { type: string }) {
-  if (type === 'video-call') return <Video size={14} style={{ color: '#38BDF8' }} />;
-  if (type === 'workshop') return <BookOpen size={14} style={{ color: '#A78BFA' }} />;
-  if (type === 'deadline') return <AlertCircle size={14} style={{ color: '#E85555' }} />;
-  return <Users size={14} style={{ color: '#4CAF7D' }} />;
+const mono: React.CSSProperties = {
+  fontFamily: 'var(--font-dm-mono), DM Mono, monospace',
 }
 
 export default function Dashboard() {
-  const myGroups = groups.filter((g) => g.featured);
-  const discoverGroups = groups.filter((g) => !g.featured);
+  const myGroups = groups.filter(g => g.featured)
+  const discoverGroups = groups.filter(g => !g.featured)
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#0D0D0D' }}>
+    <div style={{ background: '#F6F1E9', minHeight: '100vh' }}>
       {/* Nav */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md" style={{ backgroundColor: 'rgba(13,13,13,0.8)', borderBottom: '1px solid #2A2A2A' }}>
-        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <CompassMark size={28} />
-            <span className="hidden sm:block text-lg" style={{ fontFamily: 'var(--font-instrument-serif), Georgia, serif', color: '#F0EDE8' }}>Narrative Atlas</span>
-          </Link>
-
-          {/* Search */}
-          <div className="flex-1 max-w-md mx-auto">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2" size={15} style={{ color: '#8A8580' }} />
-              <input
-                type="search"
-                placeholder="Search groups, members, documents..."
-                className="w-full rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none transition-colors"
-                style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A', color: '#F0EDE8' }}
-              />
-            </div>
-          </div>
-
-          {/* Right icons */}
-          <div className="flex items-center gap-2 shrink-0">
-            <button className="relative p-2 rounded-lg transition-colors" style={{ color: '#8A8580' }}>
-              <Bell size={18} />
-              <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#E8A838' }} />
-            </button>
-            <button className="p-2 rounded-lg transition-colors" style={{ color: '#8A8580' }}>
-              <MessageSquare size={18} />
-            </button>
-            <Avatar initials={currentUser.avatar} size="sm" online />
-          </div>
+      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 40px', borderBottom: '1px solid #E6E0D6', background: '#F6F1E9', position: 'sticky', top: 0, zIndex: 50 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
+          <CompassMark size={20} />
+          <span style={{ ...mono, fontSize: 12, fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase' }}>Narrative Atlas</span>
+        </div>
+        <div style={{ display: 'flex', gap: 28, ...mono, fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#8A8880' }}>
+          <Link href="/" style={{ color: '#1C1C1A', textDecoration: 'none' }}>Home</Link>
+          <Link href="/groups" style={{ color: '#8A8880', textDecoration: 'none' }}>Communities</Link>
+          <Link href="/members" style={{ color: '#8A8880', textDecoration: 'none' }}>Members</Link>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <Search size={16} style={{ color: '#8A8880' }} />
+          <Avatar initials={currentUser.avatar} size="sm" online />
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main content */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Hero */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="relative rounded-2xl overflow-hidden"
-              style={{
-                background: 'linear-gradient(135deg, #1a2a1a 0%, #1a1a2a 50%, #2a1a1a 100%)',
-                border: '1px solid #2A2A2A',
-              }}
-            >
-              <div
-                className="absolute inset-0 opacity-30"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 30% 50%, rgba(232,168,56,0.12) 0%, transparent 60%), radial-gradient(circle at 70% 50%, rgba(76,175,125,0.06) 0%, transparent 60%)',
-                }}
-              />
-              <div className="relative z-10 p-8">
-                <p className="text-sm mb-1" style={{ color: '#8A8580' }}>Good morning,</p>
-                <h1 style={{ fontFamily: 'var(--font-instrument-serif), Georgia, serif', fontSize: '2.5rem', color: '#F0EDE8' }}>{currentUser.name.split(' ')[0]}.</h1>
-                <p className="mt-2 text-sm" style={{ color: '#8A8580' }}>
-                  You have{' '}
-                  <span className="font-medium" style={{ color: '#E8A838' }}>3 new messages</span> and{' '}
-                  <span className="font-medium" style={{ color: '#E8A838' }}>1 upcoming event</span> today.
-                </p>
-              </div>
-            </motion.div>
+      <div style={{ maxWidth: 1080, margin: '0 auto', padding: '30px 40px 70px' }}>
 
-            {/* My Groups */}
-            <section>
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-medium" style={{ color: '#F0EDE8' }}>My Groups</h2>
-                <Link href="/groups" className="text-sm flex items-center gap-1 transition-colors" style={{ color: '#E8A838' }}>
-                  View all <ChevronRight size={14} />
-                </Link>
-              </div>
-              <div className="flex gap-4 overflow-x-auto pb-2 no-scrollbar">
-                {myGroups.map((group, i) => (
-                  <motion.div
-                    key={group.id}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="shrink-0 w-64"
-                  >
-                    <GroupCard group={group} compact />
-                  </motion.div>
-                ))}
-              </div>
-            </section>
-
-            {/* Activity Feed */}
-            <section>
-              <h2 className="text-lg font-medium mb-4" style={{ color: '#F0EDE8' }}>Global Activity</h2>
-              <div className="rounded-xl" style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A' }}>
-                {activities.slice(0, 10).map((activity) => (
-                  <div key={activity.id} className="px-4">
-                    <ActivityItem activity={activity} />
-                  </div>
-                ))}
-                <div className="px-4 py-3">
-                  <button className="text-sm flex items-center gap-1 transition-colors" style={{ color: '#E8A838' }}>
-                    Load more activity <ChevronRight size={14} />
-                  </button>
-                </div>
-              </div>
-            </section>
-
-            {/* Discover */}
-            <section>
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-medium" style={{ color: '#F0EDE8' }}>Discover Groups</h2>
-                <Link href="/groups" className="text-sm flex items-center gap-1 transition-colors" style={{ color: '#E8A838' }}>
-                  Browse all <ChevronRight size={14} />
-                </Link>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {discoverGroups.map((group, i) => (
-                  <motion.div
-                    key={group.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                  >
-                    <GroupCard group={group} />
-                  </motion.div>
-                ))}
-              </div>
-            </section>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Upcoming Events */}
-            <div className="rounded-xl p-5" style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A' }}>
-              <h3 className="font-medium mb-4" style={{ color: '#F0EDE8' }}>Upcoming Events</h3>
-              <div className="space-y-3">
-                {events.map((event) => (
-                  <motion.div
-                    key={event.id}
-                    whileHover={{ x: 2 }}
-                    className="flex gap-3 p-3 rounded-lg transition-colors cursor-pointer"
-                  >
-                    <div className="mt-0.5">
-                      <EventIcon type={event.type} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm leading-snug line-clamp-2" style={{ color: '#F0EDE8' }}>{event.title}</p>
-                      <p className="text-xs mt-1" style={{ color: '#8A8580' }}>{event.date}</p>
-                      <p className="text-xs mt-0.5" style={{ color: '#E8A838' }}>{event.time}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Members online */}
-            <div className="rounded-xl p-5" style={{ backgroundColor: '#161616', border: '1px solid #2A2A2A' }}>
-              <h3 className="font-medium mb-4" style={{ color: '#F0EDE8' }}>Members Online</h3>
-              <div className="space-y-3">
-                {members.slice(0, 5).map((member) => (
-                  <Link key={member.id} href={`/members/${member.id}`}>
-                    <div className="flex items-center gap-3 py-1 transition-opacity hover:opacity-80">
-                      <Avatar initials={member.avatar} size="sm" online />
-                      <div className="min-w-0">
-                        <p className="text-sm truncate" style={{ color: '#F0EDE8' }}>{member.name}</p>
-                        <p className="text-xs truncate" style={{ color: '#8A8580' }}>{member.location}</p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+        {/* Hero photo banner */}
+        <div style={{ position: 'relative', borderRadius: 8, overflow: 'hidden', height: 300, marginBottom: 14, background: '#2a1a0e' }}>
+          <img
+            src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1200&q=80"
+            alt=""
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', opacity: 0.88 }}
+          />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(20,18,15,0.78) 0%, rgba(20,18,15,0.45) 42%, rgba(20,18,15,0.05) 75%)' }} />
+          <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 44px', maxWidth: 620 }}>
+            <p style={{ ...mono, fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#E7B89C', marginBottom: 14 }}>
+              MapWorks Learning · Virtual Exchange
+            </p>
+            <h1 style={{ fontSize: 40, fontWeight: 300, letterSpacing: '-0.025em', lineHeight: 1.06, color: '#F8F4EC', marginBottom: 12 }}>
+              Good morning,{' '}
+              <em style={{ fontStyle: 'italic', color: '#F0A878' }}>{currentUser.name.split(' ')[0]}</em>.
+            </h1>
+            <p style={{ fontSize: 14, fontWeight: 300, lineHeight: 1.6, color: 'rgba(248,244,236,0.82)' }}>
+              You belong to {myGroups.length} groups and {myGroups.length + 1} circles. Your circle has new posts since yesterday.
+            </p>
           </div>
         </div>
-      </main>
+
+        {/* Stats strip */}
+        <div style={{ display: 'flex', gap: 10, marginBottom: 44 }}>
+          {[
+            { n: myGroups.length, l: 'Groups' },
+            { n: myGroups.length + 1, l: 'Circles' },
+            { n: activities.length, l: 'Activity' },
+            { n: events.length, l: 'Upcoming' },
+          ].map(({ n, l }) => (
+            <div key={l} style={{ flex: 1, background: '#FBF7F0', border: '1px solid #E6E0D6', borderRadius: 6, padding: '16px 18px' }}>
+              <div style={{ fontSize: 26, fontWeight: 300, letterSpacing: '-0.02em', color: '#1C1C1A' }}>{n}</div>
+              <div style={{ ...mono, fontSize: 9, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#A09A8E', marginTop: 3 }}>{l}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Group zones */}
+        {myGroups.map(group => (
+          <div key={group.id} style={{ marginBottom: 46 }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: 14, borderBottom: '2px solid #1C1C1A' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 14 }}>
+                <span style={{ fontSize: 21, fontWeight: 400, letterSpacing: '-0.01em' }}>{group.name}</span>
+                <span style={{ ...mono, fontSize: 10, letterSpacing: '0.04em', color: '#A09A8E', textTransform: 'uppercase' }}>Group · {group.memberCount} people</span>
+              </div>
+              <Link href={`/groups/${group.id}`} style={{ display: 'flex', alignItems: 'center', gap: 6, ...mono, fontSize: 10, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#C2683D', textDecoration: 'none' }}>
+                Open group dialogue <ArrowRight size={12} />
+              </Link>
+            </div>
+
+            <div style={{ ...mono, fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#A09A8E', margin: '22px 0 16px', display: 'flex', alignItems: 'center', gap: 8 }}>
+              <Lock size={11} />
+              Your circles in this group
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+              <GroupCard group={group} />
+              <GroupCard group={groups[(groups.indexOf(group) + 2) % groups.length]} />
+            </div>
+
+            <p style={{ marginTop: 14, ...mono, fontSize: 9, letterSpacing: '0.03em', color: '#B8B0A2' }}>
+              You only see circles you have been added to. Other circles in this group stay private to their members.
+            </p>
+          </div>
+        ))}
+
+        {/* Discover more */}
+        <div style={{ marginTop: 10 }}>
+          <p style={{ ...mono, fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#C2683D', marginBottom: 12 }}>Discover</p>
+          <h2 style={{ fontSize: 28, fontWeight: 300, letterSpacing: '-0.02em', marginBottom: 20 }}>More communities</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
+            {discoverGroups.slice(0, 3).map(group => (
+              <GroupCard key={group.id} group={group} />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )
 }

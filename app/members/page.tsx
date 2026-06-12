@@ -1,15 +1,20 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Search } from 'lucide-react'
 import Link from 'next/link'
 import CompassMark from '@/components/CompassMark'
 import MemberCard from '@/components/MemberCard'
+import Avatar from '@/components/ui/Avatar'
 import { members } from '@/lib/mockData'
+
+const mono: React.CSSProperties = {
+  fontFamily: 'var(--font-dm-mono), DM Mono, monospace',
+}
 
 export default function MembersPage() {
   const [searchQuery, setSearchQuery] = useState('')
+  const currentUser = members[0]
 
   const filtered = members.filter(m =>
     m.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -17,56 +22,50 @@ export default function MembersPage() {
   )
 
   return (
-    <div className="min-h-screen bg-background">
-      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-2">
-            <CompassMark size={28} />
-            <span className="font-serif text-lg hidden sm:block">Narrative Atlas</span>
-          </Link>
+    <div style={{ background: '#F6F1E9', minHeight: '100vh' }}>
+      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 40px', borderBottom: '1px solid #E6E0D6', background: '#F6F1E9', position: 'sticky', top: 0, zIndex: 50 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
+          <CompassMark size={20} />
+          <span style={{ ...mono, fontSize: 12, fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase' as const }}>Narrative Atlas</span>
         </div>
+        <div style={{ display: 'flex', gap: 28, ...mono, fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: '#8A8880' }}>
+          <Link href="/" style={{ color: '#8A8880', textDecoration: 'none' }}>Home</Link>
+          <Link href="/groups" style={{ color: '#8A8880', textDecoration: 'none' }}>Communities</Link>
+          <Link href="/members" style={{ color: '#1C1C1A', textDecoration: 'none' }}>Members</Link>
+        </div>
+        <Avatar initials={currentUser.avatar} size="sm" />
       </nav>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
-        >
-          <h1 className="font-serif text-4xl text-text-primary mb-2">Members</h1>
-          <p className="text-text-secondary">{members.length} changemakers from around the world.</p>
-        </motion.div>
+      <main style={{ maxWidth: 1080, margin: '0 auto', padding: '40px 40px 70px' }}>
+        <p style={{ ...mono, fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase' as const, color: '#C2683D', marginBottom: 12 }}>Directory</p>
+        <h1 style={{ fontSize: 48, fontWeight: 300, letterSpacing: '-0.025em', marginBottom: 10 }}>Members</h1>
+        <p style={{ fontSize: 15, fontWeight: 300, color: '#5A5855', marginBottom: 36 }}>
+          {members.length} changemakers from around the world.
+        </p>
 
-        <div className="relative mb-6 max-w-md">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-secondary" />
+        <div style={{ position: 'relative' as const, maxWidth: 320, marginBottom: 32 }}>
+          <Search size={14} style={{ position: 'absolute' as const, left: 12, top: '50%', transform: 'translateY(-50%)', color: '#A09A8E' }} />
           <input
             type="text"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={e => setSearchQuery(e.target.value)}
             placeholder="Search members…"
-            className="bg-surface border border-border rounded-lg pl-9 pr-4 py-2 text-sm text-text-primary placeholder-text-secondary focus:outline-none focus:border-accent transition-colors w-full"
+            style={{ width: '100%', padding: '9px 14px 9px 34px', border: '1px solid #D8D5CE', borderRadius: 4, background: '#FBF7F0', ...mono, fontSize: 11, color: '#1C1C1A', outline: 'none' }}
           />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filtered.map((member, i) => (
-            <motion.div
-              key={member.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05 }}
-            >
-              <MemberCard member={member} />
-            </motion.div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 14 }}>
+          {filtered.map(member => (
+            <MemberCard key={member.id} member={member} />
           ))}
         </div>
 
         {filtered.length === 0 && (
-          <div className="text-center py-16">
-            <p className="text-text-secondary">No members found.</p>
+          <div style={{ textAlign: 'center' as const, padding: '96px 0' }}>
+            <p style={{ ...mono, fontSize: 11, color: '#A09A8E' }}>No members found.</p>
           </div>
         )}
-      </div>
+      </main>
     </div>
   )
 }

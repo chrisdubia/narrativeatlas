@@ -1,149 +1,130 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Eye, EyeOff } from 'lucide-react'
 import CompassMark from '@/components/CompassMark'
-import Button from '@/components/ui/Button'
-
-const quotes = [
-  { text: "This platform helped me connect with students in Kenya who face the same climate challenges we do in Copenhagen.", author: "Maja H., Denmark, 17" },
-  { text: "I never imagined I'd be co-writing legislation with someone from another continent. Narrative Atlas made it real.", author: "Oluwaseun A., Nigeria, 19" },
-  { text: "Our group map shows how our stories are connected across borders. It's the most meaningful project I've done.", author: "Chen Wei, Taiwan, 16" },
-]
 
 export default function LoginPage() {
-  const [showPassword, setShowPassword] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   return (
-    <div className="min-h-screen flex">
+    <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', minHeight: '100vh', background: '#F2F0EB' }}>
+
       {/* Left panel */}
-      <div className="hidden lg:flex lg:w-1/2 relative bg-[#0A0A0A] flex-col items-center justify-center px-12 overflow-hidden">
-        {/* Background texture */}
-        <div className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 25% 25%, #E8A83820 0%, transparent 50%), radial-gradient(circle at 75% 75%, #4CAF7D10 0%, transparent 50%)',
-          }}
-        />
-        
-        {/* Animated compass */}
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-          className="absolute top-1/4 right-1/4 opacity-10"
-        >
-          <CompassMark size={300} />
-        </motion.div>
-        
-        <div className="relative z-10 max-w-md">
-          <div className="flex items-center gap-3 mb-8">
-            <CompassMark size={36} />
-            <span className="font-serif text-2xl text-text-primary">Narrative Atlas</span>
-          </div>
-          
-          <h1 className="font-serif text-5xl text-text-primary leading-tight mb-4">
-            Where young changemakers connect, collaborate, and act.
-          </h1>
-          
-          <p className="text-text-secondary text-lg mb-12">
-            A global platform for students building bridges across borders.
+      <div
+        style={{
+          background: '#ECEAE4',
+          padding: '56px 60px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          borderRight: '1px solid #D8D5CE',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
+          <CompassMark size={20} />
+          <span style={{ fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 13, fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase' as const }}>
+            Narrative Atlas
+          </span>
+        </div>
+
+        <div style={{ maxWidth: 380 }}>
+          <p style={{ fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase' as const, color: '#A8A59E', marginBottom: 20 }}>
+            A project of MapWorks Learning
           </p>
-          
-          {/* Floating quote cards */}
-          <div className="space-y-4">
-            {quotes.map((quote, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 + i * 0.2 }}
-                className="bg-surface/80 border border-border rounded-xl p-4 backdrop-blur-sm"
-              >
-                <p className="text-sm text-text-primary mb-2">&ldquo;{quote.text}&rdquo;</p>
-                <p className="text-xs text-text-secondary">— {quote.author}</p>
-              </motion.div>
-            ))}
+          <h1 style={{ fontSize: 42, fontWeight: 300, letterSpacing: '-0.025em', lineHeight: 1.08, marginBottom: 20 }}>
+            Where young people<br />meet the{' '}
+            <em style={{ fontStyle: 'italic', color: '#C2683D' }}>world</em>.
+          </h1>
+          <p style={{ fontSize: 14, fontWeight: 300, lineHeight: 1.75, color: '#5A5855' }}>
+            Circles of students and teachers from different places, listening deeply, learning courageously, and building solutions together.
+          </p>
+          <div style={{ display: 'flex', gap: 18, alignItems: 'center', marginTop: 28 }}>
+            <div style={{ width: 78, height: 112, border: '1.5px solid #1C1C1A', borderRadius: 2, position: 'relative' as const, background: '#F8F6F1', flexShrink: 0 }}>
+              <div style={{ position: 'absolute' as const, top: 6, left: 6, right: 22, bottom: 6, border: '1px solid #C2683D', borderRadius: 1 }} />
+              <div style={{ position: 'absolute' as const, top: '50%', right: 26, width: 4, height: 4, borderRadius: '50%', background: '#1C1C1A', transform: 'translateY(-50%)' }} />
+            </div>
+            <p style={{ fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 10, letterSpacing: '0.04em', lineHeight: 1.7, color: '#7A7870' }}>
+              Open the door.<br /><strong style={{ color: '#1C1C1A', fontWeight: 400 }}>Pull up to the circle.</strong>
+            </p>
           </div>
         </div>
+
+        <p style={{ fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 9, letterSpacing: '0.08em', color: '#A8A59E', textTransform: 'uppercase' as const }}>
+          Led by youth · Powered by purpose · Connected to the world
+        </p>
       </div>
-      
+
       {/* Right panel */}
-      <div className="flex-1 bg-surface flex flex-col items-center justify-center px-6 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="w-full max-w-sm"
-        >
-          <div className="flex justify-center mb-8">
-            <CompassMark size={48} />
+      <div style={{ padding: '56px 60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ width: '100%', maxWidth: 320 }}>
+          <p style={{ fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase' as const, color: '#A8A59E', marginBottom: 12 }}>
+            Welcome back
+          </p>
+          <h2 style={{ fontSize: 30, fontWeight: 300, letterSpacing: '-0.02em', marginBottom: 8 }}>Sign in</h2>
+          <p style={{ fontSize: 13, fontWeight: 300, color: '#7A7870', marginBottom: 32, lineHeight: 1.6 }}>
+            Continue to your circles and projects.
+          </p>
+
+          <div style={{ marginBottom: 14 }}>
+            <label style={{ display: 'block', fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 9, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: '#A8A59E', marginBottom: 7 }}>
+              Email or phone
+            </label>
+            <input
+              type="text"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              placeholder="you@school.edu"
+              style={{ width: '100%', padding: '12px 14px', border: '1px solid #D8D5CE', borderRadius: 3, background: '#FFFFFF', fontFamily: 'var(--font-epilogue), Epilogue, sans-serif', fontSize: 14, fontWeight: 300, color: '#1C1C1A', outline: 'none' }}
+            />
           </div>
-          
-          <h2 className="font-serif text-3xl text-text-primary mb-2 text-center">Welcome back</h2>
-          <p className="text-text-secondary text-sm text-center mb-8">Sign in to your account</p>
-          
-          <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-            <div>
-              <label className="block text-xs text-text-secondary mb-2 uppercase tracking-wide">Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                className="w-full bg-transparent border-b border-border text-text-primary placeholder-text-secondary/50 py-2 text-sm focus:outline-none focus:border-accent transition-colors"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-xs text-text-secondary mb-2 uppercase tracking-wide">Password</label>
-              <div className="relative">
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="••••••••"
-                  className="w-full bg-transparent border-b border-border text-text-primary placeholder-text-secondary/50 py-2 text-sm focus:outline-none focus:border-accent transition-colors pr-8"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-0 top-2 text-text-secondary hover:text-text-primary"
-                >
-                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                </button>
-              </div>
-            </div>
-            
-            <Button variant="primary" size="lg" fullWidth>
-              Sign in
-            </Button>
-          </form>
-          
-          <div className="flex items-center my-6">
-            <div className="flex-1 h-px bg-border" />
-            <span className="px-3 text-xs text-text-secondary">or</span>
-            <div className="flex-1 h-px bg-border" />
+          <div style={{ marginBottom: 14 }}>
+            <label style={{ display: 'block', fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 9, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: '#A8A59E', marginBottom: 7 }}>
+              Password
+            </label>
+            <input
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              placeholder="••••••••"
+              style={{ width: '100%', padding: '12px 14px', border: '1px solid #D8D5CE', borderRadius: 3, background: '#FFFFFF', fontFamily: 'var(--font-epilogue), Epilogue, sans-serif', fontSize: 14, fontWeight: 300, color: '#1C1C1A', outline: 'none' }}
+            />
           </div>
-          
-          <Button variant="ghost" size="lg" fullWidth>
-            <svg className="w-4 h-4" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-              <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-              <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-              <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+
+          <button style={{ width: '100%', padding: '13px 0', border: 'none', borderRadius: 3, background: '#1C1C1A', color: '#F2F0EB', fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase' as const, cursor: 'pointer', marginTop: 8 }}>
+            Sign in
+          </button>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 16 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 10, color: '#7A7870' }}>
+              <span style={{ width: 13, height: 13, border: '1px solid #B0ADA6', borderRadius: 2, display: 'inline-block' }} />
+              Remember me
+            </div>
+            <a href="#" style={{ fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 10, color: '#4A7A9B', textDecoration: 'none' }}>
+              Forgot password?
+            </a>
+          </div>
+
+          <button style={{ width: '100%', padding: '11px 0', border: '1px solid #D8D5CE', borderRadius: 3, background: 'transparent', fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 10, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#5A5855', cursor: 'pointer', marginTop: 10 }}>
+            Email me a one-time code
+          </button>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14, margin: '26px 0' }}>
+            <div style={{ flex: 1, height: 1, background: '#E0DDD6' }} />
+            <span style={{ fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase' as const, color: '#B0ADA6' }}>or</span>
+            <div style={{ flex: 1, height: 1, background: '#E0DDD6' }} />
+          </div>
+
+          <button style={{ width: '100%', padding: '12px 0', border: '1px solid #D8D5CE', borderRadius: 3, background: '#FFFFFF', fontFamily: 'var(--font-dm-mono), DM Mono, monospace', fontSize: 10, letterSpacing: '0.08em', textTransform: 'uppercase' as const, color: '#1C1C1A', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
+            <svg width="14" height="14" viewBox="0 0 18 18">
+              <path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.71-1.57 2.68-3.89 2.68-6.62z"/>
+              <path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.83.86-3.04.86-2.34 0-4.32-1.58-5.03-3.7H.96v2.33A9 9 0 0 0 9 18z"/>
+              <path fill="#FBBC05" d="M3.97 10.72a5.4 5.4 0 0 1 0-3.44V4.95H.96a9 9 0 0 0 0 8.1l3.01-2.33z"/>
+              <path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 9 0 9 9 0 0 0 .96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"/>
             </svg>
             Continue with Google
-          </Button>
-          
-          <p className="text-center text-sm text-text-secondary mt-6">
-            New to Narrative Atlas?{' '}
-            <a href="#" className="text-accent hover:text-accent-hover transition-colors">
-              Request access
-            </a>
-          </p>
-        </motion.div>
+          </button>
+        </div>
       </div>
     </div>
   )

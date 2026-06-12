@@ -1,21 +1,23 @@
 import type { Metadata } from 'next'
-import { Inter, Instrument_Serif } from 'next/font/google'
+import { Epilogue, DM_Mono } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({
+const epilogue = Epilogue({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
+  variable: '--font-epilogue',
 })
 
-const instrumentSerif = Instrument_Serif({
+const dmMono = DM_Mono({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-instrument-serif',
+  weight: ['300', '400'],
+  variable: '--font-dm-mono',
 })
 
 export const metadata: Metadata = {
   title: 'Narrative Atlas',
-  description: 'Where young changemakers connect, collaborate, and act.',
+  description: 'Where young people meet the world.',
 }
 
 export default function RootLayout({
@@ -25,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${instrumentSerif.variable} font-sans bg-background text-text-primary antialiased`}>
+      <body className={`${epilogue.variable} ${dmMono.variable} antialiased`}>
         {children}
       </body>
     </html>
